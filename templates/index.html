@@ -1,0 +1,175 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ategyeka Rodgers mobile:+256-781-244-508 E-mail:atrodgers77@gmail.com ">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Questionaire</title> 
+    <!-- Bootstrap core CSS -->
+	<link href="/static/css/bootstrap/aismac-bootstrap.css" rel="stylesheet"> 
+
+    <style>
+	    body {
+				  font-size: calc(12px + (20 - 6) * ((50vw - 300px) / (1600 - 300)));
+				  line-height: calc(1.3em + (1.5 - 1.0) * ((90vw - 300px)/(1600 - 300)));
+				  padding:0; margin:0;
+			 }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      @media (min-width: 700px) {
+        //#right-sidebar{ position:fixed; right:0; top:10%; float:right;}
+      }
+      
+      #descr{ width:100%; border-radius:5px; min-height:150px; border:1px solid lightgray; text-align:left; }
+      #listItems{ width:100%; border-radius:5px; min-height:160px; border:1px solid lightgray; text-align:left; }
+      #addescrption-section-btn1{ border:1px solid gray; float:right; width:25px; text-align:center; border-radius:12px }
+      #addescrption-section-btn1:hover{ border:1px solid blue; background:skyblue; color:white; font-weight:500; cursor:pointer;}
+      #addescrption-section-btn2{  }
+      #delete-descr-section1{ border:1px solid linen; float:right; width:25px; text-align:center; }
+      #delete-descr-section1:hover{ border:1px solid red; background:orange; color:white; font-weight:500; border-radius:4px; cursor:pointer; }    
+      #formfeedback-box{ display:none; }
+      #preview-thumb{ width:17%; min-height:70px; box-shadow:0 0 10px 1px lightgray;}
+      .oon{ display:block}
+      .oof{ display:none}
+      input[type="radio"]:checked{ padding:3px; border-radius:2px; background:skyblue; border:2px solid blue; width:20px; }
+      .question-table td{ color:blue }
+      #researcher-photo{ border:3px solid linen; border-radius:10px;}
+      @media(max-width: 600px){
+        #researcher-photo{float:center;  border:3px solid linen; border-radius:10px; vertical-align:top;}
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <!-- <link href="/static/form-validation.css" rel="stylesheet"> -->
+  </head>
+  <body class="bg-light">
+  <div class="container">
+  <table width="100%">
+	  <tr>
+		  <td style="width:30%; "> <img src="/static/images/mak-log-clear.png" width="30%"/> MAKERERE UNIVERSITY </td>
+		  <td style="text-align:center"> </td>
+		  <td style="width:30%; text-align:right"> DATA COLLECTION TOOL <img src="/static/images/dctt.png" width="30%" /> </td>
+	  </tr>
+  </table> 
+  
+  <!--=================================================================================-->
+  <br/>
+  <br/>
+ <hr/>
+  <div class="row" style="position:relative"> 
+    <div class="col-md-12" style="color:blue;"> 
+        
+        <center>
+        <div class="row" style="text-align:center">
+         
+          <div id="proceed-as-donor" class="col-md-2" onclick="enforceToken('proceed-as-donor')">  
+			    <a href="#">
+			    <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white,0 0 12px lightgray; padding:3px; min-height:100px; text-align:center"> 
+				    Proceed as: <br/><br/>
+				    <b>DONOR</b>
+			    </h5> 
+			    </a>
+          </div> 
+          <div id="proceed-as-ngo" class="col-md-2" onclick="enforceToken('proceed-as-ngo')"> 
+            <a href="#">
+                <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white,0 0 12px lightgray; padding:3px; min-height:100px; text-align:center"> 
+		            Proceed as: <br/><br/>
+		            <b>NGO</b>
+			    </h5>
+			</a>
+          </div>
+          <div id="proceed-as-regulator" class="col-md-2" onclick="enforceToken('proceed-as-regulator')"> 
+            <a href="#">
+                <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white,0 0 12px lightgray; padding:3px; min-height:100px; text-align:center"> 
+		            Proceed as: <br/><br/>
+		            <b>REGULATOR</b>
+			    </h5>
+			</a>
+          </div>
+          
+          <div class="col-md-2"> 
+             <img src="/static/images/MOSES.JPG" width="55%" id="researcher-photo"/>
+          </div>
+          <div class="col-md-4"> 
+             <h4>Welcome to this data collection system </h4>
+             <p>Thank you for considering to support our research project</p>
+          </div>
+          
+        </div> 
+        </center>
+         
+    </div> 
+  </div>  
+</div>
+
+<footer style="text-align:center">
+	  <hr/> 
+	  <br/>
+	  <br/>
+	  <br/>
+	  <div id="hidden-email-box"><center>{{.Email}}</center></div>
+	  <br/>
+	  <br/>
+	  <small>
+    <p class="mb-1">&copy; <script>document.write(new Date().getFullYear());</script> Software Development projects by Eng. Ategyeka Rodgers <br/>
+	    <img src="/static/my-icons/phone-alt.svg" width="20px"/> +256 781 224 508, 
+	    <img src="/static/my-icons/ic_mail_outline_black_24dp.png" width="20px"/> atrodgers77@gmail.com
+    </p>
+    </small>
+    <br/>
+</footer>
+<script type="text/javascript" src="/static/jqr/jq_file.js"></script>
+<script type="text/javascript" src="/static/jqr/jquery.PrintArea.js"></script> 
+ 
+<script>
+var respondentemail = document.querySelector("#hidden-email-box").textContent;
+console.log("respondentemail = "+respondentemail);
+function enforceToken(id){
+    var targetElementId = id;
+    if(targetElementId=="proceed-as-donor"){
+        var tokenx = prompt("Please enter donor access token: \nHint: Get the token from the email you received from the researcher.");
+        if(tokenx=="6e676f7365726574746f6b656e"){
+            document.getElementById(id).querySelector("a").setAttribute("href","/static/donor.html?pt={{.ServerPort}}&em="+respondentemail).click();
+        }else if(tokenx!="" && tokenx!=null){
+            alert("Incorrect access token! Please enter again.");
+        }
+    }else if(targetElementId=="proceed-as-ngo"){
+        var tokenx = prompt("Please enter ngo access token: \nHint: Get the token from the email you received from the researcher.");
+        if(tokenx=="646f6e6f727365726574746f6b656e"){
+            document.getElementById(id).querySelector("a").setAttribute("href","/static/ngo.html?pt={{.ServerPort}}&em="+respondentemail).click();
+        }else if(tokenx!="" && tokenx!=null){
+            alert("Incorrect access token! Please enter again.");
+        } 
+    }else if(targetElementId=="proceed-as-regulator"){
+        var tokenx = prompt("Please enter regulator access token: \nHint: Get the token from the email you received from the researcher.");
+        if(tokenx=="6572676f7365726574746f6b656e"){
+            document.getElementById(id).querySelector("a").setAttribute("href","/static/regulator.html?pt={{.ServerPort}}&em="+respondentemail).click();
+        }else if(tokenx!="" && tokenx!=null){
+            alert("Incorrect access token! Please enter again.");
+        } 
+    }
+} 
+
+$(document).ready(function(){
+	$("#sidebar-toggle-btn").click(function(){
+		if($("#right-sidebar").hasClass("oof")){
+			$("#right-sidebar").removeClass("oof").addClass("oon");
+		}else{ $("#right-sidebar").removeClass("oon").addClass("oof"); }
+	}); 
+}); 
+</script>
+</body>
+</html>

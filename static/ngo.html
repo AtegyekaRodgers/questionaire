@@ -1,0 +1,898 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ategyeka Rodgers mobile:+256-781-244-508 E-mail:atrodgers77@gmail.com ">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Questionaire</title> 
+    <!-- Bootstrap core CSS -->
+	<link href="css/bootstrap/aismac-bootstrap.css" rel="stylesheet"> 
+
+    <style>
+	    body {
+			  font-size: calc(12px + (20 - 6) * ((50vw - 300px) / (1600 - 300)));
+			  line-height: calc(1.3em + (1.5 - 1.0) * ((90vw - 300px)/(1600 - 300)));
+			  padding:0; margin:0;
+			 }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      @media (min-width: 700px) {
+        //#right-sidebar{ position:fixed; right:0; top:10%; float:right;}
+      }
+      
+      #descr{ width:100%; border-radius:5px; min-height:150px; border:1px solid lightgray; text-align:left; }
+      #listItems{ width:100%; border-radius:5px; min-height:160px; border:1px solid lightgray; text-align:left; }
+      #addescrption-section-btn1{ border:1px solid gray; float:right; width:25px; text-align:center; border-radius:12px }
+      #addescrption-section-btn1:hover{ border:1px solid blue; background:skyblue; color:white; font-weight:500; cursor:pointer;}
+      #addescrption-section-btn2{  }
+      #delete-descr-section1{ border:1px solid linen; float:right; width:25px; text-align:center; }
+      #delete-descr-section1:hover{ border:1px solid red; background:orange; color:white; font-weight:500; border-radius:4px; cursor:pointer; }    
+      #formfeedback-box{ display:none; }
+      #preview-thumb{ width:17%; min-height:70px; box-shadow:0 0 10px 1px lightgray;}
+      #letter-thumb{ width:50%; min-height:100px; box-shadow:0 0 10px 1px lightgray;}
+      .oon{ display:block}
+      .oof{ display:none}
+      input[type="radio"]:checked{ padding:3px; border-radius:2px; background:skyblue; border:2px solid blue; width:20px; }
+      .question-table td{ color:blue }
+      #researcher-photo{ border:1px solid lightgray; border-radius:10px; vertical-align:top;}
+      #submit-response-btn{ margin-bottom:60px; }
+    </style>
+    <!-- Custom styles for this template -->
+    <!-- <link href="form-validation.css" rel="stylesheet"> -->
+  </head>
+  <body class="bg-light">
+  <div class="container">
+  <table width="100%">
+	  <tr>
+		  <td style="width:30%; "> <img src="images/mak-log-clear.png" width="30%"/> MAKERERE UNIVERSITY </td>
+		  <td style="text-align:center"> <p>Study<br/>By</p>  <p>Student: <b>Kusemererwa Moses</b> <br>Reg. No: 2018/HD06/3491U</p> </td>
+		  <td style="width:30%; text-align:right"> DATA COLLECTION TOOL <img src="images/dctt.png" width="30%" /> </td>
+	  </tr>
+  </table>
+  <!--
+  <div class="py-5 text-center">
+    <div>
+	    <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white; padding:3px"> 
+		    RESEARCH:<br/><b>Ethical behaviour and compliance with donor reporting requirements by 
+		    Non-Governmental Organisations in Uganda</b>
+	    </h5>
+    </div> 
+    <p>
+    <small>Research proposal being presented in preparation for the partial fulfillment of 
+    the requirements for the award of the degree of Masters of Business Administration (MBA)
+    of Makerere University
+    </small>
+    </p>
+  </div>
+  --> 
+  <div class="py-5 text-center">
+    <div id="self-intro-div" class="row">
+        <div class="col-md-2">
+         <img src="images/MOSES.JPG" width="80%" id="researcher-photo"/>
+        </div>
+        <div class="col-md-8"> 
+            <h6 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white; padding:3px"> 
+	           <b>
+	               <p><br/>
+                   Hello, my name is Kusemererwa Moses, a graduate student at Makerere University. 
+	               I am conducting a study focused on finding out how ethical behaviour might affect compliance with 
+	               donor reporting requirements for NGOs in Uganda. The findings of this study are expected to 
+	               contribute to improving compliance rates in order to attract more donations in Uganda.  
+                   <p/> 
+	           </b>
+            </h6>
+        </div>
+        <div class="col-md-2"> 
+           <center>
+            <div>Recommendation Letter </div>
+            <div>
+            <a href="Recommendation Letter-Kusemererwa.pdf" target="_blank">
+            <div id="letter-thumb">
+                <img src="images/recommendation-letter.png" width="98%"/>
+            </div>
+            </a>
+            </div>
+            </center>
+        </div>
+    </div> <!-- /self-intro-div -->
+  </div>
+   
+  <div class="row" style="position:relative"> 
+    <div class="col-md-8 order-md-1" style="color:blue;"> 
+	   <p>
+	   For privacy reasons, 
+        all data collected will be treated with utmost confidentiality and used only for 
+        academic purposes. Accordingly, do not provide your organisation’s name, 
+        but tick the boxes or fill in the blank spaces provided using the appropriate option(s). 
+        Your participation is highly appreciated in advance.
+	   <p/>
+         <!-- -------form guide------- -->
+         <hr/>
+         <div style="color:gray">
+            <i><b>FORM GUIDE: </b>
+            Our system will intelligently identify all responses from the same organisation and 
+            merge them into one complete document. So it's okay to submit a partly filled form in case 
+            some fields are not applicable for you, then your colleages can fill the part you left empty.</i>
+         </div>
+         <hr/>
+        <!-- -------question 1------- -->
+        <div class="row"> 
+          <div class="col-md-8 mb-3"> 
+            <label for="prodID">1. Personal information: </label> 
+          </div>
+          <div class="col-md-6 mb-3"> 
+            <label for="respondentname">Your name: </label>
+            <input type="text" class="form-control" id="respondentname" placeholder="" value="" required>
+            <div class="invalid-feedback"> Your name is required </div>
+          </div>
+          <div class="col-md-2 mb-3">
+            <label for="respondentgender">Gender</label>
+            <input type="text" class="form-control" list="genderoptions" id="respondentgender" placeholder="" value="" required/>
+            <datalist id="genderoptions">
+                <option>Male</option>
+                <option>Female</option>
+            </datalist>
+            <div class="invalid-feedback">
+              gender is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="respondenttitle">Title</label>
+            <input type="text" class="form-control" id="respondenttitle" placeholder="" value="" required/>
+            <div class="invalid-feedback">
+              gender is required.
+            </div>
+          </div>
+        </div>
+        <hr/>
+        <!-- -------question 2------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="2">2. Specify the organisation’s operating status, as below: </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="org-permit-radio1" name="permit" type="radio" class="custom-control-input" value="Permit No"/> 
+					        <label class="custom-control-label" for="org-permit-radio1">Permit No.</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="org-permit-radio2" name="permit" type="radio" class="custom-control-input" value="Still processing it"/> 
+					        <label class="custom-control-label" for="org-permit-radio2">Still processing it</label> 
+				        </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>
+				        <input type="text" class="form-control" id="org-permit-number" style="width:60%"> 
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="org-permit-radio3" name="permit" type="radio" class="custom-control-input" value="None"/>
+			            <label class="custom-control-label" for="org-permit-radio3">None of the above</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+			 <hr/>
+        <!-- -------question 3------- -->
+        <div class="row">
+          <div class="col-md-7 mb-3"> 
+            <label for="physicalAddr">3. Physical address </label>
+            <input type="text" class="form-control" id="physicalAddr" placeholder="" value="" required>
+            <div class="invalid-feedback"> Physical address is required </div>
+          </div>
+          <div class="col-md-5 mb-3">
+            <label for="District">District</label>
+            <input type="text" class="form-control" id="District" placeholder="" value="" required/>
+            <div class="invalid-feedback">
+              District is required.
+            </div>
+          </div> 
+        </div>
+        <hr/> 
+        <!-- -------question 4------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3">4. How long has the organisation operated in Uganda? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="op-time-radio1" name="op-time" type="radio" class="custom-control-input" value="1-5 years"/> 
+					        <label class="custom-control-label" for="op-time-radio1">1-5 years</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="op-time-radio2" name="op-time" type="radio" class="custom-control-input" value="6-10 years"/> 
+					        <label class="custom-control-label" for="op-time-radio2">6-10 years</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="op-time-radio3" name="op-time" type="radio" class="custom-control-input" value="11 + years"/>
+			            <label class="custom-control-label" for="op-time-radio3">11 + years</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <h4><b>Finance/Admin Dept questions</b></h4>
+        <hr/>
+        <!-- -------question 5------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td>5. How many people are employed by the organisation country wide? 
+			        <label for="number-of-employees">Give number :</label> 
+			        </td> 
+			        <td>  
+				        <input type="number" class="form-control" id="number-of-employees"> 
+			        </td>
+		        </tr> 
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        <!-- -------question 6------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="4">
+				        6. What calibre of staff does your organisation have to ensure compliance with 
+				        donor reporting requirements? (Can pick multiple options)
+			        </td>       
+		        </tr>
+		        <tr>
+			        <td> 
+				        <label for="diploma"> Up to Diploma (Specify number) </label>
+			        </td>
+			        <td style="padding:0 0 0 5%; width:20%">
+				        <input type="number" class="form-control" id="diploma" style="width:90%"> 
+			        </td> 
+			        <td>
+				        <label for="diploma-exper"> and average experience in years </label>
+			        </td>
+			        <td style="padding:0 0 0 5%; width:15%"> 
+				        <input type="number" class="form-control" id="diploma-exper" style="width:98%"> 
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>
+				        <label for="first-degree"> First Degree (Specify number) </label>
+			        </td>
+			        <td style="padding:0 0 0 5%; width:20%">
+				        <input type="number" class="form-control" id="first-degree" style="width:90%"> 
+			        </td> 
+			        <td>
+				        <label for="first-degree-exper"> and average experience in years </label>
+			        </td>
+			        <td style="padding:0 0 0 5%; width:15%">
+				        <input type="number" class="form-control" id="first-degree-exper" style="width:98%"> 
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>
+				        <label for="first-degreeP"> First Degree +prof certification (Specify No) </label>
+			        </td>
+			        <td style="padding:0 0 0 5%; width:20%">
+				        <input type="number" class="form-control" id="first-degreeP" style="width:90%"> 
+			        </td>
+			        <td>
+				        <label for="first-degreeP-exper"> and average experience in years </label>
+			        </td>
+			        <td style="padding:0 0 0 5%; width:15%">
+				        <input type="number" class="form-control" id="first-degreeP-exper" style="width:98%"> 
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>
+				        <label for="sec-degree"> Second Degree (Specify number) </label>
+			        </td>
+			        <td style="padding:0 0 0 5%; width:20%">
+				        <input type="number" class="form-control" id="sec-degree" style="width:90%"> 
+			        </td>
+			        <td>
+				        <label for="sec-degree-exper"> and average experience in years </label>
+			        </td>
+			        <td style="padding:0 0 0 5%; width:15%">
+				        <input type="number" class="form-control" id="sec-degree-exper" style="width:98%"> 
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>
+				        <label for="sec-degreeP"> Second Degree+ (Specify number) </label>
+			        </td>
+			        <td style="padding:0 0 0 5%; width:20%">
+				        <input type="number" class="form-control" id="sec-degreeP" style="width:90%"> 
+			        </td>
+			        <td>
+				        <label for="sec-degreeP-exper"> and average experience in years </label>
+			        </td>
+			        <td style="padding:0 0 0 5%; width:15%">
+				        <input type="number" class="form-control" id="sec-degreeP-exper" style="width:98%"> 
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        
+        <!-- -------question 7------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="5">7. Do you think documenting transactions supports complying with donor reporting requirements? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="documenting-radio1" name="documenting" type="radio" class="custom-control-input" value="Strongly agree"/> 
+					        <label class="custom-control-label" for="documenting-radio1">Yes</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="documenting-radio2" name="documenting" type="radio" class="custom-control-input" value="Partially agree"/> 
+					        <label class="custom-control-label" for="documenting-radio2">No</label> 
+				        </div>
+			        </td> 
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="documenting-radio2" name="documenting" type="radio" class="custom-control-input" value="Partially agree"/> 
+					        <label class="custom-control-label" for="documenting-radio2">Sometimes</label> 
+				        </div>
+			        </td> 
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="documenting-radio5" name="documenting" type="radio" class="custom-control-input" value="Strongly disagree"/>
+			            <label class="custom-control-label" for="documenting-radio5">Not sure</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <!-- -------question 8------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="4">8. Do you share your donor reports with other stakeholders like beneficiaries, government, etc? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="do-you-share-radio1" name="do-you-share" type="radio" class="custom-control-input" value="Yes"/> 
+					        <label class="custom-control-label" for="do-you-share-radio1">Yes</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="do-you-share-radio2" name="do-you-share" type="radio" class="custom-control-input" value="No"/> 
+					        <label class="custom-control-label" for="do-you-share-radio2">No</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="do-you-share-radio3" name="do-you-share" type="radio" class="custom-control-input" value="Sometimes"/>
+			            <label class="custom-control-label" for="do-you-share-radio3">Sometimes</label>
+			           </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="do-you-share-radio4" name="do-you-share" type="radio" class="custom-control-input" value="Not sure"/>
+			            <label class="custom-control-label" for="do-you-share-radio4">Not sure</label>
+			           </div>
+			        </td>
+			        <td> 
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <br/>
+				        If yes, how?
+			        </td>
+			        <td>  
+				        <br/>
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-share-radio2" name="how-share" type="radio" class="custom-control-input" value="Available on website"/> 
+					        <label class="custom-control-label" for="how-share-radio2">Available on website</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <br/>
+				        <div class="custom-control custom-radio">
+			            <input id="how-share-radio3" name="how-share" type="radio" class="custom-control-input" value="Published in print media"/>
+			            <label class="custom-control-label" for="how-share-radio3">Published in print media</label>
+			           </div>
+			        </td>
+			        <td>
+				        <br/>
+				        <div class="custom-control custom-radio">
+			            <input id="how-share-radio4" name="how-share" type="radio" class="custom-control-input" value="Other media"/>
+			            <label class="custom-control-label" for="how-share-radio4">Other media</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td colspan="4"> 
+				        <br/>
+				        If no, why?	Specify reasons <br/>
+                        <input type="text" class="form-control" id="no-share-reason" placeholder="" value="">
+			        </td>
+			    </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <h4><b>Programmes/Logistics Dept questions</b></h4>
+        <hr/>
+        <!-- -------question 9------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3">9. Using the expenditure model, how effective has your programme been in the last 5 years</td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-radio1" name="how-effective-y1" type="radio" class="custom-control-input" value="1-3 years"/> 
+					        <label class="custom-control-label" for="how-effective-radio1">Year 1: Increase</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-radio2" name="how-effective-y1" type="radio" class="custom-control-input" value="4-6 years"/> 
+					        <label class="custom-control-label" for="how-effective-radio2">Year 1: Constant</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="how-effective-radio3" name="how-effective-y1" type="radio" class="custom-control-input" value="7 + years"/>
+			            <label class="custom-control-label" for="how-effective-radio3">Year 1: Decrease</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y2-radio1" name="how-effective-y2" type="radio" class="custom-control-input" value="1-3 years"/> 
+					        <label class="custom-control-label" for="how-effective-y2-radio1">Year 2: Increase</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y2-radio2" name="how-effective-y2" type="radio" class="custom-control-input" value="4-6 years"/> 
+					        <label class="custom-control-label" for="how-effective-y2-radio2">Year 2: Constant</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="how-effective-y2-radio3" name="how-effective-y2" type="radio" class="custom-control-input" value="7 + years"/>
+			            <label class="custom-control-label" for="how-effective-y2-radio3">Year 2: Decrease</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y3-radio1" name="how-effective-y3" type="radio" class="custom-control-input" value="1-3 years"/> 
+					        <label class="custom-control-label" for="how-effective-y3-radio1">Year 3: Increase</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y3-radio2" name="how-effective-y3" type="radio" class="custom-control-input" value="4-6 years"/> 
+					        <label class="custom-control-label" for="how-effective-y3-radio2">Year 3: Constant</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="how-effective-y3-radio3" name="how-effective-y3" type="radio" class="custom-control-input" value="7 + years"/>
+			            <label class="custom-control-label" for="how-effective-y3-radio3">Year 3: Decrease</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y4-radio1" name="how-effective-y4" type="radio" class="custom-control-input" value="1-3 years"/> 
+					        <label class="custom-control-label" for="how-effective-y4-radio1">Year 4: Increase</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y4-radio2" name="how-effective-y4" type="radio" class="custom-control-input" value="4-6 years"/> 
+					        <label class="custom-control-label" for="how-effective-y4-radio2">Year 4: Constant</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="how-effective-y4-radio3" name="how-effective-y4" type="radio" class="custom-control-input" value="7 + years"/>
+			            <label class="custom-control-label" for="how-effective-y4-radio3">Year 4: Decrease</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y5-radio1" name="how-effective-y5" type="radio" class="custom-control-input" value="1-3 years"/> 
+					        <label class="custom-control-label" for="how-effective-y5-radio1">Year 5: Increase</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y5-radio2" name="how-effective-y5" type="radio" class="custom-control-input" value="4-6 years"/> 
+					        <label class="custom-control-label" for="how-effective-y5-radio2">Year 5: Constant</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="how-effective-y5-radio3" name="how-effective-y5" type="radio" class="custom-control-input" value="7 + years"/>
+			            <label class="custom-control-label" for="how-effective-y5-radio3">Year 5: Decrease</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <!-- -------question 10------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3">10. Do you consult your beneficiaries prior to designing programmes for their benefit? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="du-consult-radio1" name="du-consult" type="radio" class="custom-control-input" value="1-3 years"/> 
+					        <label class="custom-control-label" for="du-consult-radio1">Yes</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="du-consult-radio2" name="du-consult" type="radio" class="custom-control-input" value="4-6 years"/> 
+					        <label class="custom-control-label" for="du-consult-radio2">No</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="du-consult-radio3" name="du-consult" type="radio" class="custom-control-input" value="7 + years"/>
+			            <label class="custom-control-label" for="du-consult-radio3">Sometimes</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        <h4><b>Compliance/Internal Audit Dept questions</b></h4>
+        <hr/>
+         
+        <!-- -------question 11------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="2">11. What do your donors typically require you of in order to give projects’ funding? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+					   <div class="custom-control custom-checkbox">
+			            <input id="donor-requirements-cbox1" name="donor-requirements" type="checkbox" class="custom-control-input" value="Registration with government"/>
+			            <label class="custom-control-label" for="donor-requirements-cbox1">Registration with government</label>
+			           </div>
+			        </td>
+			        <td style="padding:0 0 0 5%">
+					   <div class="custom-control custom-checkbox">
+			            <input id="donor-requirements-cbox2" name="donor-requirements" type="checkbox" class="custom-control-input" value="Organisation leadership (ED, BOD, Other structures)"/>
+			            <label class="custom-control-label" for="donor-requirements-cbox2">Organisation leadership (ED, BOD, Other structures)</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>
+					    <div class="custom-control custom-checkbox">
+			            <input id="donor-requirements-cbox3" name="donor-requirements" type="checkbox" class="custom-control-input" value="Promising proposal"/>
+			            <label class="custom-control-label" for="donor-requirements-cbox3">Promising proposal</label>
+			           </div>
+			        </td>
+			        <td style="padding:0 0 0 5%">
+					   <div class="custom-control custom-checkbox">
+			            <input id="donor-requirements-cbox4" name="donor-requirements" type="checkbox" class="custom-control-input" value="Competent staff"/>
+			            <label class="custom-control-label" for="donor-requirements-cbox4">Competent staff</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>
+					   <div class="custom-control custom-checkbox">
+			            <input id="donor-requirements-cbox5" name="donor-requirements" type="checkbox" class="custom-control-input" value="Previous experience"/>
+			            <label class="custom-control-label" for="donor-requirements-cbox5">Previous experience</label>
+			           </div>
+			        </td>
+			        <td style="padding:0 0 0 5%">
+					    <div class="custom-control custom-checkbox">
+			            <input id="donor-requirements-cbox6" name="donor-requirements-all" type="checkbox" class="custom-control-input" value="All the options"/>
+			            <label class="custom-control-label" for="donor-requirements-cbox6">All the above</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td colspan="2"> 
+					   <div class="custom-control custom-checkbox">
+			            <input id="donor-requirements-cbox7" name="donor-requirements-other" type="checkbox" class="custom-control-input" value="Other: "/>
+			            <label class="custom-control-label" for="donor-requirements-cbox7">Other, specify:</label>
+			           </div>
+				        <input type="text" class="form-control" id="donor-requirement-other" style="width:100%"> 
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <!-- -------question 12------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3">12. Do you feel the donor reporting requirements are fair and therefore achievable by your staff? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="fair-req-radio1" name="fair-req" type="radio" class="custom-control-input" value="Yes"/> 
+					        <label class="custom-control-label" for="fair-req-radio1">Yes</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="fair-req-radio2" name="fair-req" type="radio" class="custom-control-input" value="No"/> 
+					        <label class="custom-control-label" for="fair-req-radio2">No</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="fair-req-radio3" name="fair-req" type="radio" class="custom-control-input" value="Sometimes"/>
+			            <label class="custom-control-label" for="fair-req-radio3">Sometimes</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <!-- -------question 13------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3">13. Do you think donor reporting requirements are necessary? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="donor-req-necessary-radio1" name="donor-req-necessary" type="radio" class="custom-control-input" value="Yes"/> 
+					        <label class="custom-control-label" for="donor-req-necessary-radio1">Yes</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="donor-req-necessary-radio2" name="donor-req-necessary" type="radio" class="custom-control-input" value="No"/> 
+					        <label class="custom-control-label" for="donor-req-necessary-radio2">No</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="donor-req-necessary-radio3" name="donor-req-necessary" type="radio" class="custom-control-input" value="Sometimes"/>
+			            <label class="custom-control-label" for="donor-req-necessary-radio3">Sometimes</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <!-- -------question 13 a------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3"> If yes, how do they help? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="req-necessary-a-radio1" name="req-necessary-yes" type="radio" class="custom-control-input" value="Improve output quality"/> 
+					        <label class="custom-control-label" for="req-necessary-a-radio1">Improve output quality</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="req-necessary-a-radio2" name="req-necessary-yes" type="radio" class="custom-control-input" value="Increase funding prospects"/> 
+					        <label class="custom-control-label" for="req-necessary-a-radio2">Increase funding prospects</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="req-necessary-a-radio3" name="req-necessary-yes" type="radio" class="custom-control-input" value="Both"/>
+			            <label class="custom-control-label" for="req-necessary-a-radio3">Both</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- --> 
+        <!-- -------question 13 b------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3"> If no, why are they unnecessary? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="req-necessary-b-radio1" name="req-necessary-no" type="radio" class="custom-control-input" value="Time consuming"/> 
+					        <label class="custom-control-label" for="req-necessary-b-radio1">Time consuming</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="req-necessary-b-radio2" name="req-necessary-no" type="radio" class="custom-control-input" value="Too restrictive"/> 
+					        <label class="custom-control-label" for="req-necessary-b-radio2">Too restrictive</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="req-necessary-b-radio3" name="req-necessary-no" type="radio" class="custom-control-input" value="Both"/>
+			            <label class="custom-control-label" for="req-necessary-b-radio3">Both</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- --> 
+        <hr/>
+        <!-- -------question 14------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="4">14. What do you suggest could help overcome the challenges to meet donor reporting requirements? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="suggest-radio1" name="suggest" type="radio" class="custom-control-input" value="More staff"/> 
+					        <label class="custom-control-label" for="suggest-radio1">More staff</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="suggest-radio2" name="suggest" type="radio" class="custom-control-input" value="Competent staff"/> 
+					        <label class="custom-control-label" for="suggest-radio2">Competent staff</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="suggest-radio3" name="suggest" type="radio" class="custom-control-input" value="Both options"/>
+			            <label class="custom-control-label" for="suggest-radio3">Both options</label>
+			           </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="suggest-radio4" name="suggest" type="radio" class="custom-control-input" value="None"/>
+			            <label class="custom-control-label" for="suggest-radio4">None</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+          
+        <div id="formfeedback-box"> 
+	        <center> 
+			     <img src="images/AjaxLoader.gif" width="30px" /><br/> 
+		        uploading ... 
+	        </center> 
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" id="submit-response-btn" onclick="readNGOForm()">Submit now</button>
+    </div> 
+    <!--right isde bar -->
+    <div class="col-md-4 order-md-2 mb-4 oon" id="right-sidebar">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Answered</span>
+        <span class="badge badge-secondary badge-pill">0</span>
+        <span>of</span>
+        <span class="badge badge-secondary badge-pill">9</span>
+      </h4>
+      <ul class="list-group mb-3"> 
+        <li class="list-group-item d-flex justify-content-between lh-condensed" id="contact-messages-link"> 
+          <div style="width:80%">
+            <div id="form-fill-progress-bar" style="border:1px solid skyblue; border-radius:10px; height:100%; padding:4px;">
+	            <div id="form-fill-progress-solid" style="width:var(--formprogress,45%); background:cyan; border:1px solid cyan; border-radius:10px; height:100%;"> </div>
+            </div>
+          </div>
+          <span class="text-muted">45%</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Preview output document</h6>
+            <small class="text-muted">View how the document to be sent will <br/>look like</small>
+          </div>
+          <div id="preview-thumb">
+	          <!-- preview details to be popu;ated here -->
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Save to continue later</h6>
+            <small class="text-muted">You can pause filling this form in case you <br/>are interrupted for now</small>
+          </div>
+          <span class="text-muted"><button>Save </button></span>
+        </li>
+        <a href="#" title="
+        HIRE ME: 
+        Eng. Ategyeka Rodgers 
+        the developer of this 
+        data collection tool 
+        atrodgers77@gmail.com, 
+        +256 781 224 508">
+        <li class="list-group-item d-flex justify-content-between bg-light">
+          <div class="text-success" style="width:80%">
+            <h6 class="my-0"><u>Advert</u></h6>
+            <small>SOFTWARE ENGINEER AVAILABLE FOR HIRE: Call +256 781 224 508</small>
+          </div>
+          <img src="images/rodgers.png" width="17%" style="float:right; border:3px solid linen; border-radius:4px;"/>
+        </li></a>
+        <li class="list-group-item d-flex justify-content-between">
+          <span style="float:left"> Print the output document  </span>
+         <img src="my-icons/file-pdf.svg" width="7%" style="float:right; "/>
+        </li>
+      </ul> 
+      <form class="card p-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="... ">
+          <div class="input-group-append">
+            <button class="btn btn-secondary">Comment</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--/right isde bar -->
+  </div>  
+</div>
+
+<footer style="text-align:center">
+	  <hr/>
+	  <small>
+    <p class="mb-1">&copy; <script>document.write(new Date().getFullYear());</script> Software Development projects by Eng. Ategyeka Rodgers <br/>
+	    <img src="my-icons/phone-alt.svg" width="20px"/> +256 781 224 508, 
+	    <img src="my-icons/ic_mail_outline_black_24dp.png" width="20px"/> atrodgers77@gmail.com
+    </p>
+    </small>
+    <br/>
+</footer>
+<script type="text/javascript" src="jqr/jq_file.js"></script>
+<script type="text/javascript" src="jqr/jquery.PrintArea.js"></script> 
+<script src="js/wmo-plain.js"></script>
+<script src="js/get-url-query-paramss.js"></script>
+<script src="js/read-ngo-form.js"></script>
+
+<script>
+$(document).ready(function(){
+	$("#sidebar-toggle-btn").click(function(){
+		if($("#right-sidebar").hasClass("oof")){
+			$("#right-sidebar").removeClass("oof").addClass("oon");
+		}else{ $("#right-sidebar").removeClass("oon").addClass("oof"); }
+	});   
+}); 
+</script>
+</body>
+</html>

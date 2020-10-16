@@ -1,12 +1,15 @@
 {
-  "name": "Start on Heroku: Go",
-  "description": "Go Getting Started Example App",
+  "name": "questionaire",
+  "description": "The data collection tool for researchers",
   "keywords": [
-    "getting-started",
+    "researchers",
     "go",
-    "sample",
-    "example"
+    "questionaire",
+    "online",
+    "data",
+    "collection",
+    "tool"
   ],
-  "website": "http://github.com/heroku/go-getting-started",
-  "repository": "http://github.com/heroku/go-getting-started"
+  "website": "http://github.com/AtegyekaRodgers/questionaire",
+  "repository": "http://github.com/AtegyekaRodgers/questionaire"
 }

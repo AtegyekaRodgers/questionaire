@@ -1,0 +1,511 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ategyeka Rodgers mobile:+256-781-244-508 E-mail:atrodgers77@gmail.com ">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Questionaire</title> 
+    <!-- Bootstrap core CSS -->
+	<link href="/static/css/bootstrap/aismac-bootstrap.css" rel="stylesheet"> 
+
+    <style>
+	    body {
+				  font-size: calc(12px + (20 - 6) * ((50vw - 300px) / (1600 - 300)));
+				  line-height: calc(1.3em + (1.5 - 1.0) * ((90vw - 300px)/(1600 - 300)));
+				  padding:0; margin:0;
+			 }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      @media (min-width: 700px) {
+        //#right-sidebar{ position:fixed; right:0; top:10%; float:right;}
+      }
+      
+      #descr{ width:100%; border-radius:5px; min-height:150px; border:1px solid lightgray; text-align:left; }
+      #listItems{ width:100%; border-radius:5px; min-height:160px; border:1px solid lightgray; text-align:left; }
+      #addescrption-section-btn1{ border:1px solid gray; float:right; width:25px; text-align:center; border-radius:12px }
+      #addescrption-section-btn1:hover{ border:1px solid blue; background:skyblue; color:white; font-weight:500; cursor:pointer;}
+      #addescrption-section-btn2{  }
+      #delete-descr-section1{ border:1px solid linen; float:right; width:25px; text-align:center; }
+      #delete-descr-section1:hover{ border:1px solid red; background:orange; color:white; font-weight:500; border-radius:4px; cursor:pointer; }    
+      #formfeedback-box{ display:none; }
+      #preview-thumb{ width:17%; min-height:70px; box-shadow:0 0 10px 1px lightgray;}
+      #letter-thumb{ width:40%; min-height:100px; box-shadow:0 0 10px 1px lightgray;}
+      #loading-gif-container{ display:none; }
+      .oon{ display:block}
+      .oof{ display:none}
+      input[type="radio"]:checked{ padding:3px; border-radius:2px; background:skyblue; border:2px solid blue; width:20px; }
+      .question-table td{ color:blue }
+      #researcher-photo{ vertical-align:top;}
+    </style>
+    <!-- Custom styles for this template -->
+    <!-- <link href="/static/form-validation.css" rel="stylesheet"> -->
+  </head>
+  <body class="bg-light">
+  <div class="container">
+  <table width="100%">
+	  <tr>
+		  <td style="width:30%; "> <img src="/static/images/mak-log-clear.png" width="30%"/> MAKERERE UNIVERSITY </td>
+		  <td style="text-align:center"> <p>Study<br/>By</p>  <p>Student: <b>Kusemererwa Moses</b> <br>Reg. No: 2018/HD06/3491U</p> </td>
+		  <td style="width:30%; text-align:right"> DATA COLLECTION TOOL <img src="/static/images/dctt.png" width="30%" /> </td>
+	  </tr>
+  </table>
+  <!--
+  <div class="py-5 text-center">
+    <div>
+	    <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white; padding:3px"> 
+		    RESEARCH:<br/><b>Ethical behaviour and compliance with donor reporting requirements by 
+		    Non-Governmental Organisations in Uganda</b>
+	    </h5>
+    </div> 
+    <p>
+    <small>Research proposal being presented in preparation for the partial fulfillment of 
+    the requirements for the award of the degree of Masters of Business Administration (MBA)
+    of Makerere University
+    </small>
+    </p>
+  </div>
+  -->
+  <div class="py-5 text-center">
+    <table width="100%">
+    <tr>
+    <td width="15%">
+     <img src="/static/my-icons/clone-edited.png" width="45%" id="researcher-photo"/>
+     <img src="/static/my-icons/copy-edited.png" width="40%" id="researcher-photo"/>
+    </td>
+    <td>
+    <div>
+	    <h6 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white; padding:3px"> 
+		   <b>
+		       <p><br/>
+	           Responses received from 140 respondents, 60 organisations.
+	           <p/> 
+		   </b>
+	    </h6>
+    </div> 
+    </td>
+    <td width="20%">
+        <center>
+            Print responses in pdf
+            <div id="letter-thumb">
+	             <div id="responses-print-div">
+	                
+	             </div>
+            </div>
+        </center>
+    </td>
+    </tr>
+    </table>
+  </div>
+
+  <div class="row" style="position:relative">
+    <div class="col-md-4 order-md-2 mb-4 oon" id="right-sidebar">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Actions</span>
+        <span class="badge badge-secondary badge-pill">3</span>
+      </h4>
+      <ul class="list-group mb-3"> 
+        <li class="list-group-item d-flex justify-content-between lh-condensed" id="contact-messages-link"> 
+          <div style="width:80%">
+            <div id="form-fill-progress-bar" style="border:1px solid skyblue; border-radius:10px; height:100%; padding:4px;">
+	            <div id="form-fill-progress-solid" style="width:var(--formprogress,45%); background:cyan; border:1px solid cyan; border-radius:10px; height:100%;"> </div>
+            </div>
+          </div>
+          <span class="text-muted">45%</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Preview output document</h6>
+            <small class="text-muted">View how the document to be sent will <br/>look like</small>
+          </div>
+          <div id="preview-thumb">
+	          <!-- preview details to be popu;ated here -->
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Save to continue later</h6>
+            <small class="text-muted">You can pause filling this form in case you <br/>are interrupted for now</small>
+          </div>
+          <span class="text-muted"><button>Save </button></span>
+        </li>
+        <a href="#" title="
+        HIRE ME: 
+        Eng. Ategyeka Rodgers 
+        the developer of this 
+        data collection tool 
+        atrodgers77@gmail.com, 
+        +256 781 224 508">
+        <li class="list-group-item d-flex justify-content-between bg-light">
+          <div class="text-success" style="width:80%">
+            <h6 class="my-0"><u>Advert</u></h6>
+            <small>SOFTWARE ENGINEER AVAILABLE FOR HIRE: Call +256 781 224 508</small>
+          </div>
+          <img src="/static/images/rodgers.png" width="17%" style="float:right; border:3px solid linen; border-radius:4px;"/>
+        </li></a>
+        <li class="list-group-item d-flex justify-content-between">
+          <span style="float:left"> Print the output document  </span>
+         <img src="/static/my-icons/file-pdf.svg" width="7%" style="float:right; "/>
+        </li>
+      </ul> 
+      <form class="card p-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="... ">
+          <div class="input-group-append">
+            <button class="btn btn-secondary">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-8 order-md-1" style="min-height:70vh ; color:blue; background:white; padding:1% 1% 3% 1%; position:relative;" id="responses-container-div">
+      
+      <h4 class="mb-3"/>
+	      <img id="sidebar-toggle-btn" src="/static/my-icons/ic_menu_black_18dp.png" width="30px" style="float:right; border:1px solid lightgray; border-radius:4px"/>
+	   </h4> 
+	   <div id="loading-gif-container" style="position:absolute; top:20vh; z-index:50; width:96%; padding:2vw; border:1px solid linen">
+	       <center> 
+	            <img src="/static/images/AjaxLoader.gif" width="40vw" /> loading ... 
+	       </center>
+	   </div> 
+         All Responses
+    </div> 
+  </div>  
+</div>
+
+<footer style="text-align:center">
+	  <hr/>
+	  <small>
+    <p class="mb-1">&copy; <script>document.write(new Date().getFullYear());</script> Software Development projects by Eng. Rodgers Ategyeka <br/>
+	    <img src="/static/my-icons/phone-alt.svg" width="20px"/> +256 781 224 508, 
+	    <img src="/static/my-icons/ic_mail_outline_black_24dp.png" width="20px"/> atrodgers77@gmail.com
+    </p>
+    </small>
+    <br/>
+</footer>
+<script type="text/javascript" src="/static/jqr/jq_file.js"></script>
+<script type="text/javascript" src="/static/jqr/jquery.PrintArea.js"></script> 
+<script src="js/get-url-query-params.js"></script>
+<script src="/static/js/wmo-plainn.js"></script>
+<script>
+//---------------------------------------------
+    var urlhostt = urlHost || "{{.ServerAddress}}";
+    const serverRoot = "ws://"+urlhostt+":{{.ServerPort}}";
+    console.log("responses: serverRoot = "+serverRoot);
+//---------------------------------------------
+ var state = {
+    ngo: {
+        token:"646f6e6f727365726574746f6b656e",
+        questions:{
+            qn1:{questionId:"qn1", qnlabel:"1", qnstatement:"Personal information:", iskey:false},
+            qn1_a:{questionId:"qn1_a", qnlabel:"a)", qnstatement:"Name", iskey:true},
+            qn1_b:{questionId:"qn1_b", qnlabel:"b)", qnstatement:"Gender", iskey:true},
+            qn1_c:{questionId:"qn1_c", qnlabel:"c)", qnstatement:"Title", iskey:true},
+            qn1_d:{questionId:"qn1_d", qnlabel:"d)", qnstatement:"E-mail", iskey:true}, 
+            qn2:{questionId:"qn2", qnlabel:"2", qnstatement:"Specify the organisation’s operating status, as below:", iskey:false},
+            qn2_a:{questionId:"qn2_a", qnlabel:"b", qnstatement:"Permit Number:", iskey:true},
+            qn3:{questionId:"qn3", qnlabel:"3", qnstatement:"Physical address", iskey:true}, 
+            qn3_b:{questionId:"qn3_b", qnlabel:"b", qnstatement:"District:", iskey:true}, 
+            qn4:{questionId:"qn4", qnlabel:"4", qnstatement:"How long has the organisation operated in Uganda?:", iskey:false}, 
+            qn5:{questionId:"qn5", qnlabel:"5", qnstatement:"How many people are employed by the organisation country wide? Give number :", iskey:false},
+            qn6:{questionId:"qn6", qnlabel:"6", qnstatement:"What calibre of staff does your organisation have to ensure compliance with donor reporting requirements? (Can pick multiple options)", iskey:false},
+            qn6_a:{questionId:"qn6_a", qnlabel:"a", qnstatement:"Up to Diploma", iskey:true},
+            qn6_b:{questionId:"qn6_b", qnlabel:"b", qnstatement:"First Degree", iskey:true},
+            qn6_c:{questionId:"qn6_c", qnlabel:"v", qnstatement:"First Degree +prof certification", iskey:true},
+            qn6_d:{questionId:"qn6_d", qnlabel:"d", qnstatement:"Second Degree", iskey:true},
+            qn6_e:{questionId:"qn6_e", qnlabel:"e", qnstatement:"Second Degree+", iskey:true}, 
+            qn7:{questionId:"qn7", qnlabel:"7", qnstatement:"Do you think documenting transactions supports complying with donor reporting requirements?", iskey:false},
+            qn8:{questionId:"qn8", qnlabel:"8", qnstatement:"Do you share your donor reports with other stakeholders like beneficiaries, government, etc?", iskey:false},   
+            qn9:{questionId:"qn9", qnlabel:"9", qnstatement:"Using the expenditure model, how effective has your programme been in the last 5 years", iskey:false},   
+            qn10:{questionId:"qn10", qnlabel:"10", qnstatement:"Do you consult your beneficiaries prior to designing programmes for their benefit?", iskey:false},   
+            qn11:{questionId:"qn11", qnlabel:"11", qnstatement:"What do your donors typically require you of in order to give projects’ funding?", iskey:false},  
+            qn12:{questionId:"qn12", qnlabel:"12", qnstatement:"Do you feel the donor reporting requirements are fair and therefore achievable by your staff?", iskey:false},
+            qn13:{questionId:"qn13", qnlabel:"13", qnstatement:"Do you think donor reporting requirements are necessary?", iskey:false},   
+            qn14:{questionId:"qn14", qnlabel:"14", qnstatement:"What do you suggest could help overcome the challenges to meet donor reporting requirements?", iskey:false},
+        },
+        organisations:[
+          {
+            orgname:"AIRD",
+            ttype:"ngo",
+            about:"African Initiative for Relief and Development",
+            respondents:[{name:"",gender:"",title:"",email:""},{name:"",gender:"",title:"",email:""},{name:"",gender:"",title:"",email:""} ],
+            responses:[]
+          }
+          
+        ]
+   },
+       
+   donor: {
+        token:"6e676f7365726574746f6b656e",
+        questions:{
+            qn1:{questionId:"qn1", qnlabel:"1", qnstatement:"Personal information:", iskey:false},
+            qn1_a:{questionId:"qn1_a", qnlabel:"a)", qnstatement:"Name", iskey:true},
+            qn1_b:{questionId:"qn1_b", qnlabel:"b)", qnstatement:"Gender", iskey:true},
+            qn1_c:{questionId:"qn1_c", qnlabel:"c)", qnstatement:"Title", iskey:true},
+            qn1_d:{questionId:"qn1_d", qnlabel:"d)", qnstatement:"E-mail", iskey:true},
+            qn2:{questionId:"qn2", qnlabel:"2", qnstatement:"Please specify your agency’s operating status, as below:", iskey:false},
+            qn2_a_i:{questionId:"qn2_a_i", qnlabel:"a)", qnstatement:"Physical address:", iskey:true},
+            qn2_a_ii:{questionId:"qn2_a_ii", qnlabel:"", qnstatement:"District:", iskey:true},
+            qn2_b:{questionId:"qn2_b", qnlabel:"b", qnstatement:"Permit No:", iskey:true},
+            qn3:{questionId:"qn3", qnlabel:"3", qnstatement:"How long has the agency operated in Uganda? (years)", iskey:false},
+            qn4:{questionId:"qn4", qnlabel:"4", qnstatement:"How many people are employed by the agency country wide? Give the number:", iskey:false},
+            qn5:{questionId:"qn5", qnlabel:"5", qnstatement:"Are there some NGOs/IPs that your agency funds in Uganda?", iskey:false},
+            qn6:{questionId:"qn6", qnlabel:"6", qnstatement:"Using the budget model, how has been the flow of your funding to Ugandan IPs in the last 5 years?", iskey:false},
+            qn7:{questionId:"qn7", qnlabel:"7", qnstatement:"Can NGOs/IPs registration with government, in some ways, affect their compliance with your grant reporting requirements?", iskey:false},   
+            qn8:{questionId:"qn8", qnlabel:"8", qnstatement:"On a scale of 1-5, how would you rate the integrity of your Ugandan Partners in complying with the reporting requirements?", iskey:false},   
+            qn9:{questionId:"qn9", qnlabel:"9", qnstatement:"Do you think prior beneficiary consultations & pubic access to NGO reports enhance compliance with your grant reporting requirements?", iskey:false},   
+            qn10:{questionId:"qn10", qnlabel:"10", qnstatement:"On a scale of 1-5, how would you rate the culture of transaction documentation by your IPs in Uganda as required by both the donors & government?", iskey:false},  
+            qn11:{questionId:"qn11", qnlabel:"11", qnstatement:"How do you communicate your reporting requirements to the NGOs’ staff? (Can pick as many)", iskey:false},
+            qn12:{questionId:"qn12", qnlabel:"12", qnstatement:"What support does your agency give to the IPs to ensure that program and financial reports are submitted per the set standards? (Can pick multiple options)", iskey:false},   
+            qn13:{questionId:"qn13", qnlabel:"13", qnstatement:"How often does your agency carry out the chosen activity (ies) above?", iskey:true},
+            qn14:{questionId:"qn14", qnlabel:"14", qnstatement:"What is your impression about the quality of reports submitted by the IPs in terms of completeness, accuracy and timeliness? (Can pick multiple options)", iskey:false},
+             qn14_a:{questionId:"qn14_a", qnlabel:"a)", qnstatement:"Compliant (Specify number of IPs)", iskey:true},
+             qn14_b:{questionId:"qn14_b", qnlabel:"b)", qnstatement:"Partially compliant (Specify number of IPs) ", iskey:true},
+             qn14_c:{questionId:"qn14_c", qnlabel:"c)", qnstatement:"Non-compliant (Specify number of IPs) ", iskey:true},
+             qn14_d:{questionId:"qn14_d", qnlabel:"d)", qnstatement:"Unclassified (Specify number of IPs)", iskey:true},
+            qn15:{questionId:"qn15", qnlabel:"15", qnstatement:"Using an audit model, what opinions have been common amongst your IPs in the last 5 years?", iskey:false},
+             qn15_a:{questionId:"qn15_a", qnlabel:"a)", qnstatement:"Unqualified (Specify number of IPs)", iskey:true},
+             qn15_b:{questionId:"qn15_b", qnlabel:"b)", qnstatement:"Qualified (Specify number of IPs) ", iskey:true},
+             qn15_c:{questionId:"qn15_c", qnlabel:"c)", qnstatement:"Disclaimer (Specify number of IPs)", iskey:true}, 
+            qn16:{questionId:"qn16", qnlabel:"16", qnstatement:"What issues have been emphasized in the last 5 annual audits? Tick as appropriate", iskey:false},
+            qn17:{questionId:"qn17", qnlabel:"17", qnstatement:"What are your suggestions in overcoming the challenges for non-compliance? Outline", iskey:false}
+        },
+        organisations:[
+            {
+            orgname:"UNHCR",
+            ttype:"donor",
+            about:"The UN refugee agency",
+            respondents:[{name:"Robert Mwebaze",gender:"Male",title:"Finance manager",email:"mwebazerona@gmail.com"},{name:"Kate Magara",gender:"Female",title:"Managing director",email:"katemagara45@yahoo.com"},{name:"Lilian Kyomudigido",gender:"Female",title:"Doctor",email:"kyomudigidolilian@gmail.com"} ],
+            responses:[
+                {questionId:"qn1",answers:[]},
+                {questionId:"qn1_a",answers:["anser1"]},
+                {questionId:"qn1_b",answers:["anser1"]},
+                {questionId:"qn1_c",answers:["anser1"]},
+                {questionId:"qn1_d",answers:["anser1","anser1","anser1"]},
+                {questionId:"qn2",answers:["anser1"]},
+                {questionId:"qn2_a_i", answers:["anser1"]},
+                {questionId:"qn2_a_ii", answers:["anser1"]},
+                {questionId:"qn2_b", answers:["anser1"]},
+                {questionId:"qn3", answers:["anser1"]},
+                {questionId:"qn4", answers:["anser1"]},
+                {questionId:"qn5", answers:["anser1"]},
+                {questionId:"qn6", answers:["anser1"]},
+                {questionId:"qn7", answers:["anser1"]},   
+                {questionId:"qn8", answers:["anser1"]},   
+                {questionId:"qn9", answers:["anser1"]},   
+                {questionId:"qn10", answers:["anser1"]},  
+                {questionId:"qn11", answers:["anser1"]},
+                {questionId:"qn12", answers:["anser1"]},   
+                {questionId:"qn13", answers:["anser1"]},
+                {questionId:"qn14", answers:["anser1"]},
+                 {questionId:"qn14_a", answers:["anser1"]},
+                 {questionId:"qn14_b", answers:["anser1"]},
+                 {questionId:"qn14_c", answers:["anser1"]},
+                 {questionId:"qn14_d", answers:["anser1"]},
+                {questionId:"qn15", answers:["anser1","anser1","anser1","anser1"]},
+                 {questionId:"qn15_a", answers:["anser1"]},
+                 {questionId:"qn15_b", answers:["anser1"]},
+                 {questionId:"qn15_c", answers:["anser1"]}, 
+                {questionId:"qn16", answers:["anser1"]},
+                {questionId:"qn17", answers:["anser1","anser1"]}
+              ]
+          },
+          {
+            orgname:"WFP",
+            ttype:"donor",
+            about:"The UN food agency",
+            respondents:[{name:"Robert Mwebaze",gender:"Male",title:"Finance manager",email:"mwebazerona@gmail.com"},{name:"Kate Magara",gender:"Female",title:"Managing director",email:"katemagara45@yahoo.com"},{name:"Lilian Kyomudigido",gender:"Female",title:"Doctor",email:"kyomudigidolilian@gmail.com"} ],
+            responses:[
+                {questionId:"qn1",answers:[]},
+                {questionId:"qn1_a",answers:["anser1"]},
+                {questionId:"qn1_b",answers:["anser1"]},
+                {questionId:"qn1_c",answers:["anser1"]},
+                {questionId:"qn1_d",answers:["anser1","anser1","anser1"]},
+                {questionId:"qn2",answers:["anser1"]},
+                {questionId:"qn2_a_i", answers:["anser1"]},
+                {questionId:"qn2_a_ii", answers:["anser1"]},
+                {questionId:"qn2_b", answers:["anser1"]},
+                {questionId:"qn3", answers:["anser1"]},
+                {questionId:"qn4", answers:["anser1"]},
+                {questionId:"qn5", answers:["anser1"]},
+                {questionId:"qn6", answers:["anser1"]},
+                {questionId:"qn7", answers:["anser1"]},   
+                {questionId:"qn8", answers:["anser1"]},   
+                {questionId:"qn9", answers:["anser1"]},   
+                {questionId:"qn10", answers:["anser1"]},  
+                {questionId:"qn11", answers:["anser1"]},
+                {questionId:"qn12", answers:["anser1"]},   
+                {questionId:"qn13", answers:["anser1"]},
+                {questionId:"qn14", answers:["anser1"]},
+                 {questionId:"qn14_a", answers:["anser1"]},
+                 {questionId:"qn14_b", answers:["anser1"]},
+                 {questionId:"qn14_c", answers:["anser1"]},
+                 {questionId:"qn14_d", answers:["anser1"]},
+                {questionId:"qn15", answers:["anser1","anser1","anser1","anser1"]},
+                 {questionId:"qn15_a", answers:["anser1"]},
+                 {questionId:"qn15_b", answers:["anser1"]},
+                 {questionId:"qn15_c", answers:["anser1"]}, 
+                {questionId:"qn16", answers:["anser1"]},
+                {questionId:"qn17", answers:["anser1","anser1"]}
+              ]
+          }
+          
+       ]
+    },
+    regulator: {
+        token:"6572676f7365726574746f6b656e",
+        questions:{
+            qn1:{questionId:"qn1", qnlabel:"1", qnstatement:"Personal information:", iskey:false},
+            qn1_a:{questionId:"qn1_a", qnlabel:"a)", qnstatement:"Name", iskey:true},
+            qn1_b:{questionId:"qn1_b", qnlabel:"b)", qnstatement:"Gender", iskey:true},
+            qn1_c:{questionId:"qn1_c", qnlabel:"c)", qnstatement:"Title", iskey:true},
+            qn1_d:{questionId:"qn1_d", qnlabel:"d)", qnstatement:"E-mail", iskey:true},
+            qn2:{questionId:"qn2", qnlabel:"2", qnstatement:"Please specify your agency’s operating status, as below:", iskey:false},
+            qn2_a_i:{questionId:"qn2_a_i", qnlabel:"a)", qnstatement:"Physical address:", iskey:true},
+            qn2_a_ii:{questionId:"qn2_a_ii", qnlabel:"", qnstatement:"District:", iskey:true},
+            qn2_b:{questionId:"qn2_b", qnlabel:"b", qnstatement:"Permit No:", iskey:true},
+            qn3:{questionId:"qn3", qnlabel:"3", qnstatement:"How long has the agency operated in Uganda? (years)", iskey:false},
+            qn4:{questionId:"qn4", qnlabel:"4", qnstatement:"How many Ugandans do you think are employed by the NGO sector country wide? Give the number:", iskey:false},
+            qn5:{questionId:"qn5", qnlabel:"5", qnstatement:"Do you think prior stakeholder consultations & pubic access to NGO reports might further enhance compliance with grants reporting requirements?", iskey:false},
+            qn6:{questionId:"qn6", qnlabel:"6", qnstatement:"How would you as a regulator ensure prior stakeholder consultations & pubic access to NGO reports?", iskey:false},
+            qn7:{questionId:"qn7", qnlabel:"7", qnstatement:"On a scale of 1-5, how are Non-Governmental Organisations in Uganda responsive to calls to submit their quarterly financial reports?", iskey:false},
+            qn8:{questionId:"qn8", qnlabel:"8", qnstatement:"Do you feel donor reporting requirements are fairly simple and therefore achievable by the NGOs?", iskey:false},
+            qn9:{questionId:"qn9", qnlabel:"9", qnstatement:"What do you suggest could facilitate NGOs to comply with government reporting requirements?", iskey:false}
+        },
+        organisations:[]
+    }
+ }
+ //---------------------------------------------
+ var renderLoading = function(){
+    document.querySelector("#loading-gif-container").style.display = "block";
+ } 
+ //-----
+ var stopLoadingAnimation = function(){
+    var gifDiv = document.querySelector("#loading-gif-container");
+    if(gifDiv != null && gifDiv != undefined){
+        gifDiv.style.display = "none";
+    }
+ }
+ //-----
+ var renderNoResponseYet = function(msg){
+    stopLoadingAnimation();
+    document.querySelector("#responses-container-div").innerHTML = '';
+    var htmlCompnent = '\
+    <h4>ALL RESPONSES : </h4><hr/>\
+    <div style="position:relative; width:80%; padding:2vw; border:2px solid linen; margin: 0 0 0 9%; ">\
+	       <center>';
+	       htmlCompnent += msg;
+	       htmlCompnent += '\
+	       </center>\
+	   </div>';
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = htmlCompnent; 
+    document.querySelector("#responses-container-div").appendChild(newDiv);
+ }
+ //-----
+ var renderResponses = function(){
+     document.querySelector("#responses-container-div").innerHTML = '<h4>ALL RESPONSES : </h4><hr/>';
+     var ORGTYPs = ["ngo","donor","regulator"];
+     ORGTYPs.forEach((ORGTYP) => { 
+         for(var i in state[ORGTYP].organisations){
+            var htmlCompnent = '<div style="min-height:100px; border:1px solid lightgray; width:100%; margin:2% 0 0 0; padding:0 3px 0 3px;">';
+            var orgName = state[ORGTYP].organisations[i].orgname+' ('+ORGTYP+')';
+            htmlCompnent += '<h3>'+orgName+'</h3>';
+            var aboutOrg = state[ORGTYP].organisations[i].about;
+            htmlCompnent += '<h3>'+aboutOrg+'</h3><br/>Respondents:<ul>';
+            state[ORGTYP].organisations[i].respondents.forEach(function(respondent){
+                htmlCompnent += '<li>'+respondent.name+', '+respondent.gender+', '+respondent.title+', '+respondent.email+'</li>';
+            });
+            htmlCompnent += '</ul>'
+            state[ORGTYP].organisations[i].responses.forEach(function(response){
+                htmlCompnent += '<div"><span style="color:gray">'+(!state[ORGTYP].questions[response.questionId].questionId.includes("_")?'<hr/>'+state[ORGTYP].questions[response.questionId].qnlabel+'.':' ')+' '+state[ORGTYP].questions[response.questionId].qnstatement+'</span>';
+                    if(!state[ORGTYP].questions[response.questionId].iskey){
+                        htmlCompnent += '<ul>';
+                        response.answers.forEach(function(ans){
+                            htmlCompnent += '<li>'+ans+'</li>';
+                        });
+                        htmlCompnent += '</ul>';
+                     }else{
+                        htmlCompnent += ': ';
+                        response.answers.forEach(function(ans){
+                            htmlCompnent += ans+', ';
+                        });
+                     }
+                htmlCompnent += '</div>';
+            });
+            htmlCompnent += '</div>';
+            var newDiv = document.createElement('div');
+            newDiv.innerHTML = htmlCompnent;
+            document.querySelector("#responses-container-div").appendChild(newDiv);
+         }
+    });
+  }
+//---------------------------------------------
+    renderLoading();
+    //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+        let wmo = new WebsocketMessageObject("wmo"); 
+        let ws = new WebSocket(serverRoot+"/read/newcon");
+        ws.onopen = function(evt) { 
+			ws.binaryType = "arraybuffer"; 
+			console.log("websocket connection OPEN");
+        }
+        ws.onclose = function(evt) {
+            console.log("CLOSED");
+            ws = null; 
+			ws = new WebSocket(serverRoot+"/read/newcon");
+        }
+        ws.onmessage = function(evt) {
+            console.log("RESPONSE: " + evt.data);
+            var jsonMsg = wmo.DecodeJson(evt.data);
+            var strMsg = '';
+            if((jsonMsg.status != "OK") && (jsonMsg.status != "noResponseYet")){
+                console.log("!! Websocket Responded with Error: "+jsonMsg.errror);
+            }else if(jsonMsg.status == "noResponseYet"){
+                renderNoResponseYet(jsonMsg.errror);
+                console.log("Websocket Responded with no data: "+jsonMsg.errror);
+            }else{
+                strMsg = wmo.DecodeString(evt.data, "jsonstr");
+                let oneOrgJson = JSON.parse(strMsg);
+                var orgTyp = oneOrgJson.ttype;
+                state[orgTyp].organisations.push(oneOrgJson);
+                stopLoadingAnimation();
+                renderResponses();
+            }
+        }
+        ws.onerror = function(evt) {
+            console.log("ERROR: " + evt.data);
+        }
+     //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+//---------------------------------------------
+
+$(document).ready(function(){
+	$("#sidebar-toggle-btn").click(function(){
+		if($("#right-sidebar").hasClass("oof")){
+			$("#right-sidebar").removeClass("oof").addClass("oon");
+		}else{ $("#right-sidebar").removeClass("oon").addClass("oof"); }
+	});
+	
+	$(document).on('click',"#letter-thumb",function(){
+			 $(this).find("#responses-print-div").html($("#responses-container-div").html());
+			 var mode = 'iframe';
+			 var close = mode=="popup";
+			 var options={mode:mode,popClose:close};
+			 $(this).printArea(options);
+			 $(this).find("#responses-print-div").html('');
+	  }); 
+}); 
+</script>
+</body>
+</html>
