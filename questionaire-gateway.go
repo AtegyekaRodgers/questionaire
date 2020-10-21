@@ -75,15 +75,16 @@ func dbconnect() *sql.DB {
 func createAppDB(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
     db := dbconnect()
 	defer db.Close()
+	/*
 	createDbQuery := fmt.Sprintf("CREATE DATABASE questionaire_db")
     _, err := db.Exec(createDbQuery)
     if err != nil {  
 	    fmt.Println(err.Error())
     }else{ 
         fmt.Println("Database: 'questionaire_db' created successfully.")
-          
+         */ 
         StartTransactionQuery := fmt.Sprintf("START TRANSACTION")
-        _, err = db.Exec(StartTransactionQuery)
+        _, err := db.Exec(StartTransactionQuery)
         if err != nil {  
 	        fmt.Println(err.Error())
         } 
@@ -116,7 +117,7 @@ func createAppDB(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
             fmt.Println("Transaction commited successfully.")
             fmt.Println("................Done......................")
         } 
-    } 
+    //} 
 }
 
 func insertSampleDataIntoDb(w http.ResponseWriter, r *http.Request, _ httprouter.Params){
