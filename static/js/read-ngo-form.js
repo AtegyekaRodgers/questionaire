@@ -7,7 +7,8 @@ var organization = {
           }
 var responses = [];
 function submitNGOForm(){
-    let wsProtoco = urlProtocol=="https"?"wss":"ws";
+    let urlProtoco = urlProtocol || window.location.protocol; 
+    let wsProtoco = urlProtoco=="https"?"wss":"ws";
     let urlhostt = urlHost || "0.0.0.0";
     let portxx = urlParams.pt || 9910;
     let serverEndPoint = wsProtoco+"://"+urlhostt+":"+portxx+"/submit/newcon";

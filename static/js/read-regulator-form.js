@@ -8,9 +8,10 @@ var organization = {
 
 var responses = [];
 function submitRegulatorForm(){
+    let urlProtoco = urlProtocol || window.location.protocol; 
+    let wsProtoco = urlProtoco=="https"?"wss":"ws";
     let urlhostt = urlHost || "0.0.0.0";
-    let portxx = urlParams.pt || 9910; 
-    let wsProtoco = urlProtocol=="https"?"wss":"ws";
+    let portxx = urlParams.pt || 9910;
     let serverEndPoint = wsProtoco+"://"+urlhostt+":"+portxx+"/submit/newcon";
     console.log("serverEndPoint = "+serverEndPoint);
     document.querySelector('#formfeedback-box').style.display = 'block';

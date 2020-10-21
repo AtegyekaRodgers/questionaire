@@ -8,9 +8,11 @@ var organization = {
 
 var responses = [];
 function submitDonorForm(){
-    var urlhostt = urlHost || "0.0.0.0";
-    portxx = urlParams.pt || 9910; 
-    let serverEndPoint = "ws://"+urlhostt+":"+portxx+"/submit/newcon";
+    let urlProtoco = urlProtocol || window.location.protocol; 
+    let wsProtoco = urlProtoco=="https"?"wss":"ws";
+    let urlhostt = urlHost || "0.0.0.0";
+    let portxx = urlParams.pt || 9910; 
+    let serverEndPoint = wsProtoco+"://"+urlhostt+":"+portxx+"/submit/newcon";
     console.log("serverEndPoint = "+serverEndPoint); 
     document.querySelector('#formfeedback-box').style.display = 'block';
     console.log(JSON.stringify(organization));
