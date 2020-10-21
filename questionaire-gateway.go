@@ -75,7 +75,7 @@ func dbconnect() *sql.DB {
 func createAppDB(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
     db := dbconnect()
 	defer db.Close()
-	createDbQuery := fmt.Sprintf("CREATE DATABASE IF NOT EXISTS questionaire_db")
+	createDbQuery := fmt.Sprintf("CREATE DATABASE questionaire_db")
     _, err := db.Exec(createDbQuery)
     if err != nil {  
 	    fmt.Println(err.Error())
