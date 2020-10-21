@@ -21,7 +21,7 @@
     
     //----
     var getProtocol = function(){ 
-        return window.location.hostname;
+        return window.location.protocol;
     }
     var urlProtocol = getProtocol(); 
     
