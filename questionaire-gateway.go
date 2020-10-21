@@ -135,7 +135,7 @@ func insertSampleDataIntoDb(w http.ResponseWriter, r *http.Request, _ httprouter
     }else{
         fmt.Println("Well inserted into Table: 'organisations'")
     }
-    insertQuery2 := fmt.Sprintf("INSERT INTO `respondents` (`orgID`, `email`, `phone`) VALUES"+
+    insertQuery2 := fmt.Sprintf("INSERT INTO respondents (orgID, email, phone) VALUES"+
     "('DN001', 'testperson003@yahoo.com', '+256706123303'),"+
     "('NG002', 'testperson004@gmail.com', '+256781224508'),"+
     "('DN001', 'testperson001@gmail.com', '+2567061233009'),"+
@@ -150,7 +150,7 @@ func insertSampleDataIntoDb(w http.ResponseWriter, r *http.Request, _ httprouter
     }else{
         fmt.Println("Well inserted into Table: 'respondents'")
     }
-    insertQuery3 := fmt.Sprintf("INSERT INTO `responses` (`count`, `orgID`, `OrgResponseData`) VALUES"+
+    insertQuery3 := fmt.Sprintf("INSERT INTO responses (count, orgID, OrgResponseData) VALUES"+
     "(1, '', '{\"orgname\":\"\",\"ttype\":\"donor\",\"about\":\"\",\"respondents\":[{\"name\":\"Ategyeka Rodgers\",\"gender\":\"Male\",\"title\":\"General manager\",\"email\":\"testperson003@yahoo.com\"},"+
     "{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson003@yahoo.com\"},{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson003@yahoo.com\"},"+
     "{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson003@yahoo.com\"},{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson003@yahoo.com\"},"+
