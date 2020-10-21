@@ -16,7 +16,7 @@ function submitRegulatorForm(){
     let serverEndPoint = wsProtoco+"://"+urlhostt+":"+portxx+"/submit/newcon";
     console.log("serverEndPoint = "+serverEndPoint);
     document.querySelector('#formfeedback-box').style.display = 'block';
-    console.log(JSON.stringify(organization));
+    //console.log(JSON.stringify(organization));
     // create wmo
     let wmo = new WebsocketMessageObject("wmo"); 
     //add json: organization 
