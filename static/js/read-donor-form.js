@@ -9,6 +9,7 @@ var organization = {
 var responses = [];
 function submitDonorForm(){
     let urlProtoco = urlProtocol || window.location.protocol; 
+    console.log("urlProtoco: urlProtocol="+urlProtocol+", window.location.protocol="+window.location.protocol); 
     let wsProtoco = urlProtoco=="https"?"wss":"ws";
     let urlhostt = urlHost || "0.0.0.0";
     let portxx = urlParams.pt || 9910; 
