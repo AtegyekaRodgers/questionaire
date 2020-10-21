@@ -17,8 +17,13 @@
     var getHost = function(){ 
         return window.location.hostname;
     }
-    var urlHost = getHost();
-    console.log("urlHost = "+urlHost);
+    var urlHost = getHost(); 
+    
+    //----
+    var getProtocol = function(){ 
+        return window.location.hostname;
+    }
+    var urlProtocol = getProtocol(); 
     
     
     

@@ -201,8 +201,9 @@
 <script src="/static/js/wmo-plainn.js"></script>
 <script>
 //---------------------------------------------
+    var wsProtoco = urlProtocol=="https"?"wss":"ws";
     var urlhostt = urlHost || "{{.ServerAddress}}";
-    const serverRoot = "ws://"+urlhostt+":{{.ServerPort}}";
+    const serverRoot = wsProtoco+"://"+urlhostt+":{{.ServerPort}}";
     console.log("responses: serverRoot = "+serverRoot);
 //---------------------------------------------
  var state = {
