@@ -124,6 +124,8 @@ func getRouter() *httprouter.Router {
 	
 	// Index route 
 	router.GET("/", index)
+	router.GET("/createdb",createAppDB)
+	router.GET("/insertsampledata",insertSampleDataIntoDb)
 	router.GET("/read/all", reading)
 	router.GET("/submit/newcon", respondentConnectHandler) 
 	router.GET("/read/newcon", adminConnectHandler)

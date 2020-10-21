@@ -2,13 +2,15 @@ package main
 
 import ( 
 	"fmt"
+	"os"
 	"time"
 	"encoding/json" 
 	"log"
 	"net/http" 
 	"github.com/gorilla/websocket"
 	"database/sql" 
-	_ "github.com/go-sql-driver/mysql" 
+	"github.com/lib/pq"
+	_ "github.com/go-sql-driver/mysql"
 	mo "github.com/AtegyekaRodgers/WebsocketMessageObject"
 	"github.com/julienschmidt/httprouter" 
 )
@@ -47,7 +49,7 @@ var upgrader = websocket.Upgrader{} //use default options
 type Wc struct {
 	Websocket *websocket.Conn
 }
-
+/*
 func dbconnect() *sql.DB {
 	db, err := sql.Open("mysql","root:@tcp(127.0.0.1:3306)/research_questionaire_db")
 	if err != nil {  fmt.Println("Failed to connect to the dabtabase"); fmt.Println(err.Error()) 
@@ -55,6 +57,132 @@ func dbconnect() *sql.DB {
 	}
 	fmt.Println("questionare gateway Connected to the dabtabase ");
 	return db
+}
+*/
+//For connecting to heroku postgres database, do the following:
+func dbconnect() *sql.DB {
+    url := os.Getenv("DATABASE_URL")
+    connection, _ := pq.ParseURL(url)
+    connection += " sslmode=require"
+
+    db, err := sql.Open("postgres", connection)
+    if err != nil {
+        log.Println(err)
+    } 
+    return db
+}
+
+func createAppDB(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+    db := dbconnect()
+	defer db.Close()
+	createDbQuery := fmt.Sprintf("CREATE DATABASE IF NOT EXISTS questionaire_db")
+    _, err := db.Exec(createDbQuery)
+    if err != nil {  
+	    fmt.Println(err.Error())
+    }else{ 
+        fmt.Println("Database: 'questionaire_db' created successfully.")
+          
+        StartTransactionQuery := fmt.Sprintf("START TRANSACTION")
+        _, err = db.Exec(StartTransactionQuery)
+        if err != nil {  
+	        fmt.Println(err.Error())
+        } 
+        createTableQuery1 := fmt.Sprintf("CREATE TABLE IF NOT EXISTS organisations (orgID varchar(12) NOT NULL, orgname varchar(300) NOT NULL, orgType varchar(12) NOT NULL, about varchar(300) DEFAULT '', email varchar(60) DEFAULT '', phone varchar(20) DEFAULT '' )")  
+        _, err = db.Exec(createTableQuery1)
+        if err != nil {  
+	        fmt.Println(err.Error())
+        }else{
+            fmt.Println("Table: 'organisations' created successfully.")
+        } 
+        createTableQuery2 := fmt.Sprintf("CREATE TABLE IF NOT EXISTS respondents (orgID varchar(12) NOT NULL, email varchar(60) DEFAULT '', phone varchar(20) DEFAULT '' )")  
+        _, err = db.Exec(createTableQuery2)
+        if err != nil {  
+	        fmt.Println(err.Error())
+        }else{
+            fmt.Println("Table: 'respondents' created successfully.")
+        } 
+        createTableQuery3 := "CREATE TABLE IF NOT EXISTS responses ( count SERIAL NOT NULL UNIQUE, orgID varchar(12) NOT NULL UNIQUE, OrgResponseData TEXT )" 
+        _, err = db.Exec(createTableQuery3)
+        if err != nil {  
+	        fmt.Println(err.Error())
+        }else{
+            fmt.Println("Table: 'responses' created successfully.")
+        }  
+        commitTransactionQuery := fmt.Sprintf("COMMIT")  
+        _, err = db.Exec(commitTransactionQuery)
+        if err != nil {  
+	        fmt.Println(err.Error())
+        }else{
+            fmt.Println("Transaction commited successfully.")
+            fmt.Println("................Done......................")
+        } 
+    } 
+}
+
+func insertSampleDataIntoDb(w http.ResponseWriter, r *http.Request, _ httprouter.Params){
+    db := dbconnect()
+	defer db.Close()
+	insertQuery1 := fmt.Sprintf("INSERT INTO organisations"+
+	"(orgID, orgname, orgType, about, email, phone) VALUES"+
+    "('DN001', 'UNHCR', 'donor', 'The UN Refugee agancy', 'testorg001@yahoo.com', ''),"+
+    "('DN002', 'UNDP', 'donor', 'For the development of the world economy', 'testorg002@gmail.com', ''),"+
+    "('NG001', 'AIRD', 'ngo', 'For relief and development', 'testorg003@yahoo.com', ''),"+
+    "('NG002', 'Window Trust', 'ngo', 'For education support', 'testorg004@hotmail.com', '')")
+    _, err := db.Exec(insertQuery1)
+    if err != nil {  
+        fmt.Println(err.Error())
+    }else{
+        fmt.Println("Well inserted into Table: 'organisations'")
+    }
+    insertQuery2 := fmt.Sprintf("INSERT INTO `respondents` (`orgID`, `email`, `phone`) VALUES"+
+    "('DN001', 'testperson003@yahoo.com', '+256706123303'),"+
+    "('NG002', 'testperson004@gmail.com', '+256781224508'),"+
+    "('DN001', 'testperson001@gmail.com', '+2567061233009'),"+
+    "('NG002', 'testperson002@hotmail.com', ''),"+
+    "('DN002', 'testperson005@gmail.com', '+2567061233030'),"+
+    "('NG001', 'testperson006@hotmail.com', ''),"+
+    "('DN002', 'testperson007@gmail.com', ''),"+
+    "('NG001', 'testperson008@yahoo.com', '')")
+    _, err = db.Exec(insertQuery2)
+    if err != nil {  
+        fmt.Println(err.Error())
+    }else{
+        fmt.Println("Well inserted into Table: 'respondents'")
+    }
+    insertQuery3 := fmt.Sprintf("INSERT INTO `responses` (`count`, `orgID`, `OrgResponseData`) VALUES"+
+    "(1, '', '{\"orgname\":\"\",\"ttype\":\"donor\",\"about\":\"\",\"respondents\":[{\"name\":\"Ategyeka Rodgers\",\"gender\":\"Male\",\"title\":\"General manager\",\"email\":\"testperson003@yahoo.com\"},"+
+    "{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson003@yahoo.com\"},{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson003@yahoo.com\"},"+
+    "{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson003@yahoo.com\"},{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson003@yahoo.com\"},"+
+    "{\"name\":\"Pires Robert\",\"gender\":\"Male\",\"title\":\"Footballer\",\"email\":\"testperson004@yahoo.com\"},{\"name\":\"Kabagambe Kened\",\"gender\":\"Male\",\"title\":\"Plumber\",\"email\":\"testperson005@gmail.com\"},"+
+    "{\"name\":\"Kelen Jesca\",\"gender\":\"Female\",\"title\":\"Human resource manager\",\"email\":\"testperson008@yahoo.com\"},{\"name\":\"Mawanda Charles\",\"gender\":\"Male\",\"title\":\"Driver\",\"email\":\"testperson008@yahoo.com\"},"+
+    "{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson008@yahoo.com\"},{\"name\":\"Kato samuel\",\"gender\":\"Male\",\"title\":\"Manager\",\"email\":\"testperson008@yahoo.com\"},"+
+    "{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson004@yahoo.com\"},{\"name\":\"Jimy Piriyo\",\"gender\":\"Male\",\"title\":\"Data analyst\",\"email\":\"testing00021@yahoo.com\"}],\"responses\":[{\"questionId\":\"qn1\",\"answers\":[]},"+
+    "{\"questionId\":\"qn1_a\",\"answers\":[\"Ategyeka Rodgers\"]},{\"questionId\":\"qn1_b\",\"answers\":[\"Male\"]},{\"questionId\":\"qn1_c\",\"answers\":[\"General manager\"]},{\"questionId\":\"qn2\",\"answers\":[]},"+
+    "{\"questionId\":\"qn2_a\",\"answers\":[\"\"]},{\"questionId\":\"qn2_b\",\"answers\":[\"\"]},"+
+    "{\"questionId\":\"qn2_c\",\"answers\":[\"\"]},{\"questionId\":\"qn3\",\"answers\":[\"\"]},{\"questionId\":\"qn4\",\"answers\":[\"\"]},{\"questionId\":\"qn5\",\"answers\":[\"\",\"\"]},{\"questionId\":\"qn6\",\"answers\":[\"\",\"\",\"\",\"\",\"\"]},"+
+    "{\"questionId\":\"qn7\",\"answers\":[\"\"]},{\"questionId\":\"qn8\",\"answers\":[\"\"]},"+
+    "{\"questionId\":\"qn9\",\"answers\":[\"\"]},{\"questionId\":\"qn10\",\"answers\":[\"\"]},{\"questionId\":\"qn11\",\"answers\":[]},{\"questionId\":\"qn12\",\"answers\":[]},{\"questionId\":\"qn13\",\"answers\":[]},{\"questionId\":\"qn14\",\"answers\":[]},"+
+    "{\"questionId\":\"qn15\",\"answers\":[]},{\"questionId\":\"qn16\",\"answers\":[]},"+
+    "{\"questionId\":\"qn17\",\"answers\":[\"\",\"\",\"\"]}]}'), "+
+    "(2, 'NG001', '{\"orgname\":\"AIRD\",\"ttype\":\"donor\",\"about\":\"For relief and development\",\"respondents\":[{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson008@yahoo.com\"},"+
+    "{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson008@yahoo.com\"},"+
+    "{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson008@yahoo.com\"},"+
+    "{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson008@yahoo.com\"},{\"name\":\"\",\"gender\":\"\",\"title\":\"\",\"email\":\"testperson008@yahoo.com\"}],\"responses\":[{\"questionId\":\"qn1\",\"answers\":[]},"+
+    "{\"questionId\":\"qn1_a\",\"answers\":[\"\"]},"+
+    "{\"questionId\":\"qn1_b\",\"answers\":[\"\"]},{\"questionId\":\"qn1_c\",\"answers\":[\"\"]},"+
+    "{\"questionId\":\"qn2\",\"answers\":[]},{\"questionId\":\"qn2_a\",\"answers\":[\"\"]},{\"questionId\":\"qn2_b\",\"answers\":[\"\"]},{\"questionId\":\"qn2_c\",\"answers\":[\"\"]},{\"questionId\":\"qn3\",\"answers\":[\"\"]},"+
+    "{\"questionId\":\"qn4\",\"answers\":[\"\"]},"+
+    "{\"questionId\":\"qn5\",\"answers\":[\"\",\"\"]},{\"questionId\":\"qn6\",\"answers\":[\"\",\"\",\"\",\"\",\"\"]},"+
+    "{\"questionId\":\"qn7\",\"answers\":[\"\"]},{\"questionId\":\"qn8\",\"answers\":[\"\"]},{\"questionId\":\"qn9\",\"answers\":[\"\"]},{\"questionId\":\"qn10\",\"answers\":[\"\"]},{\"questionId\":\"qn11\",\"answers\":[]},"+
+    "{\"questionId\":\"qn12\",\"answers\":[]},{\"questionId\":\"qn13\",\"answers\":[]},"+
+    "{\"questionId\":\"qn14\",\"answers\":[]},{\"questionId\":\"qn15\",\"answers\":[]},"+
+    "{\"questionId\":\"qn16\",\"answers\":[]},{\"questionId\":\"qn17\",\"answers\":[\"\",\"\",\"\"]}]}')")
+    _, err = db.Exec(insertQuery3)
+    if err != nil {  
+        fmt.Println(err.Error())
+    }else{
+        fmt.Println("Well inserted into Table: 'responses'")
+     }
 }
 
 func startSessionFor(thisClient *adminClient) {
