@@ -366,9 +366,9 @@ func respondentConnectHandler(w http.ResponseWriter, r *http.Request, _ httprout
 		datatype, dataFromClient, err := webclient.ReadMessage()
 		 
 		if err != nil { 
-			if websocket.IsCloseError(err, websocket.CloseGoingAway){ 
-				break
-			}
+			//if websocket.IsCloseError(err, websocket.CloseGoingAway){ 
+			//	break
+			//}
 			log.Println("!! Error:", err) 
 		}else if len(dataFromClient)>=31 {
 		    type respons struct {
