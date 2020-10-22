@@ -27,9 +27,9 @@ function submitRegulatorForm(){
         return true;
      }
 	 let wellValidated = validateLoginForm(); 
-	 if(wellValidated){
-        //create websocket connection  
-        ws = new WebSocket( serverEndPoint );
+	 if(wellValidated){ 
+        ws = new ReconnectingWebSocket( serverEndPoint );
+        //ws = new WebSocket( serverEndPoint );
         ws.onopen = function(evt) {
             console.log("websocket connection OPEN");
 			ws.binaryType = "arraybuffer"; 
@@ -39,8 +39,9 @@ function submitRegulatorForm(){
         }
         ws.onclose = function(evt) {
             console.log("connection CLOSED");
-            ws = null;
-			ws = new WebSocket( serverEndPoint );
+            //ws = null;
+            this.ws = new WebSocket(ws.url);
+			//ws = new WebSocket( serverEndPoint );
 			let msghtml = '<img src="/static/images/ic_error_outline_black_24dp.png" width="30px" />\
                             <h4>'+'!! Connection closed</h4>\
                             '+'Please check your internet connectivity and try send again.<br/><br/>';

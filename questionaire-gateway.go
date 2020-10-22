@@ -3,6 +3,7 @@ package main
 import ( 
 	"fmt"
 	"os"
+	"io"
 	"time"
 	"encoding/json" 
 	"log"
@@ -363,9 +364,12 @@ func respondentConnectHandler(w http.ResponseWriter, r *http.Request, _ httprout
 	for {  
 		log.Println("=========================================")
 		log.Println("Waiting for data from websocket client ...")
-		datatype, dataFromClient, err := webclient.ReadMessage() 
-		fmt.Println("datatype ======= ", datatype)
-		if err != nil {
+		datatype, dataFromClient, err := webclient.ReadMessage()
+		 
+		if err != nil { 
+			if websocket.IsCloseError(err, websocket.CloseGoingAway) || err == io.EOF { 
+				break
+			}
 			log.Println("!! Error:", err) 
 		}else if len(dataFromClient)>=31 {
 		    type respons struct {

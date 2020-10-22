@@ -111,11 +111,23 @@
     </table>
   </div>
 
-  <div class="row" style="position:relative">
+  <div class="row" style="position:relative"> 
+    <div class="col-md-8 order-md-1" style="min-height:70vh ; color:blue; background:white; padding:1% 1% 3% 1%; position:relative;" id="responses-container-div">
+       <div id="loading-gif-container" style="position:absolute; top:20vh; z-index:50; width:96%; padding:2vw; border:1px solid linen">
+           <center> 
+                <img src="/static/images/AjaxLoader.gif" width="40vw" /> loading ... 
+           </center>
+       </div> 
+       All Responses
+    </div> 
+  </div>  
+  <!--right isde bar -->
     <div class="col-md-4 order-md-2 mb-4 oon" id="right-sidebar">
       <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span class="text-muted">Actions</span>
-        <span class="badge badge-secondary badge-pill">3</span>
+        <span class="text-muted">Answered</span>
+        <span class="badge badge-secondary badge-pill">0</span>
+        <span>of</span>
+        <span class="badge badge-secondary badge-pill">9</span>
       </h4>
       <ul class="list-group mb-3"> 
         <li class="list-group-item d-flex justify-content-between lh-condensed" id="contact-messages-link"> 
@@ -154,35 +166,23 @@
             <h6 class="my-0"><u>Advert</u></h6>
             <small>SOFTWARE ENGINEER AVAILABLE FOR HIRE: Call +256 781 224 508</small>
           </div>
-          <img src="/static/images/rodgers.png" width="17%" style="float:right; border:3px solid linen; border-radius:4px;"/>
+          <img src="images/rodgers.png" width="17%" style="float:right; border:3px solid linen; border-radius:4px;"/>
         </li></a>
         <li class="list-group-item d-flex justify-content-between">
           <span style="float:left"> Print the output document  </span>
-         <img src="/static/my-icons/file-pdf.svg" width="7%" style="float:right; "/>
+         <img src="my-icons/file-pdf.svg" width="7%" style="float:right; "/>
         </li>
       </ul> 
       <form class="card p-2">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="... ">
           <div class="input-group-append">
-            <button class="btn btn-secondary">Search</button>
+            <button class="btn btn-secondary">Comment</button>
           </div>
         </div>
       </form>
     </div>
-    <div class="col-md-8 order-md-1" style="min-height:70vh ; color:blue; background:white; padding:1% 1% 3% 1%; position:relative;" id="responses-container-div">
-      
-      <h4 class="mb-3"/>
-	      <img id="sidebar-toggle-btn" src="/static/my-icons/ic_menu_black_18dp.png" width="30px" style="float:right; border:1px solid lightgray; border-radius:4px"/>
-	   </h4> 
-	   <div id="loading-gif-container" style="position:absolute; top:20vh; z-index:50; width:96%; padding:2vw; border:1px solid linen">
-	       <center> 
-	            <img src="/static/images/AjaxLoader.gif" width="40vw" /> loading ... 
-	       </center>
-	   </div> 
-         All Responses
-    </div> 
-  </div>  
+    <!--/right isde bar -->
 </div>
 
 <footer style="text-align:center">
