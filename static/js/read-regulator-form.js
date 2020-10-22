@@ -87,7 +87,7 @@ function submitRegulatorForm(){
             }else{
                 let msghtml = '<img src="/static/images/ic_error_outline_black_24dp.png" width="30px" />\
                                 <h4>'+"!! Error occured."+'</h4>\
-                                <small>'+"Please check your internet connectivity and try send again."+'</small>';
+                                <small>'+"Please check your internet connectivity and try send again. Return:"+evt.data+'</small>';
                 document.querySelector('#formfeedback-box').innerHTML = msghtml;
             } 
         }
