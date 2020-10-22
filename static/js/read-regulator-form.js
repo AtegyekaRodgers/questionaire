@@ -64,9 +64,9 @@ function submitRegulatorForm(){
             } 
         }
         ws.onerror = function(evt) {
-            console.log("ERROR: " + evt);
+            console.log("ERROR: " + evt.data);
             let msghtml = '<img src="/static/images/ic_error_outline_black_24dp.png" width="30px" />\
-                            <h4>'+"!! Error occured:"+evt+'</h4>\
+                            <h4>'+"!! Error occured:"+evt.data+'</h4>\
                             <small>'+"Please check your internet connectivity and try send again."+'</small>';
             document.querySelector('#formfeedback-box').innerHTML = msghtml;
         }  

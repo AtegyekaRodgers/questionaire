@@ -2,8 +2,7 @@ package main
 
 import ( 
 	"fmt"
-	"os"
-	"io"
+	"os" 
 	"time"
 	"encoding/json" 
 	"log"
@@ -367,7 +366,7 @@ func respondentConnectHandler(w http.ResponseWriter, r *http.Request, _ httprout
 		datatype, dataFromClient, err := webclient.ReadMessage()
 		 
 		if err != nil { 
-			if websocket.IsCloseError(err, websocket.CloseGoingAway) || err == io.EOF { 
+			if websocket.IsCloseError(err, websocket.CloseGoingAway){ 
 				break
 			}
 			log.Println("!! Error:", err) 
