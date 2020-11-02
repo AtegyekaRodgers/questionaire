@@ -1,0 +1,968 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ategyeka Rodgers mobile:+256-781-244-508 E-mail:atrodgers77@gmail.com ">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Questionaire</title> 
+    <!-- Bootstrap core CSS -->
+	<link href="css/bootstrap/aismac-bootstrap.css" rel="stylesheet"> 
+
+    <style>
+	    body {
+				  font-size: calc(12px + (20 - 6) * ((50vw - 300px) / (1600 - 300)));
+				  line-height: calc(1.3em + (1.5 - 1.0) * ((90vw - 300px)/(1600 - 300)));
+				  padding:0; margin:0;
+			 }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      @media (min-width: 700px) {
+        //#right-sidebar{ position:fixed; right:0; top:10%; float:right;}
+      }
+      
+      #descr{ width:100%; border-radius:5px; min-height:150px; border:1px solid lightgray; text-align:left; }
+      #listItems{ width:100%; border-radius:5px; min-height:160px; border:1px solid lightgray; text-align:left; }
+      #addescrption-section-btn1{ border:1px solid gray; float:right; width:25px; text-align:center; border-radius:12px }
+      #addescrption-section-btn1:hover{ border:1px solid blue; background:skyblue; color:white; font-weight:500; cursor:pointer;}
+      #addescrption-section-btn2{  }
+      #delete-descr-section1{ border:1px solid linen; float:right; width:25px; text-align:center; }
+      #delete-descr-section1:hover{ border:1px solid red; background:orange; color:white; font-weight:500; border-radius:4px; cursor:pointer; }    
+      #formfeedback-box{ display:none; }
+      #preview-thumb{ width:17%; min-height:70px; box-shadow:0 0 10px 1px lightgray;} 
+      .oon{ display:block}
+      .oof{ display:none}
+      input[type="radio"]:checked{ padding:3px; border-radius:2px; background:skyblue; border:2px solid blue; width:20px; }
+      .question-table td{ color:blue }
+      #researcher-photo{ border:1px solid lightgray; border-radius:10px; vertical-align:top;}
+      #submit-response-btn{ margin-bottom:60px; }
+      
+      #self-intro-div-parent{ margin:40px 0 40px 0; } 
+      #letter-thumb{ width:50%; min-height:100px; box-shadow:0 0 10px 1px lightgray; }
+    </style>
+    <!-- Custom styles for this template -->
+    <!-- <link href="form-validation.css" rel="stylesheet"> -->
+  </head>
+  <body class="bg-light">
+  <div class="container">
+  <table width="100%">
+	  <tr>
+		  <td style="width:30%; "> <img src="images/mak-log-clear.png" width="30%"/> MAKERERE UNIVERSITY </td>
+		  <td style="text-align:center"> <p>Study<br/>By</p>  <p>Student: <b>Kusemererwa Moses</b> <br>Reg. No: 2018/HD06/3491U</p> </td>
+		  <td style="width:30%; text-align:right"> DATA COLLECTION TOOL <img src="images/dctt.png" width="30%" /> </td>
+	  </tr>
+  </table>
+  <!--
+  <div class="py-5 text-center">
+    <div>
+	    <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white; padding:3px"> 
+		    RESEARCH:<br/><b>Ethical behaviour and compliance with donor reporting requirements by 
+		    Non-Governmental Organisations in Uganda</b>
+	    </h5>
+    </div> 
+    <p>
+    <small>Research proposal being presented in preparation for the partial fulfillment of 
+    the requirements for the award of the degree of Masters of Business Administration (MBA)
+    of Makerere University
+    </small>
+    </p>
+  </div>
+  -->
+   <div class="py-5 text-center">
+    <div id="self-intro-div" class="row">
+        <div class="col-md-2">
+         <img src="images/MOSES.JPG" width="80%" id="researcher-photo"/>
+        </div>
+        <div class="col-md-8"> 
+            <h6 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white; padding:3px"> 
+	           <b>
+	               <p><br/>
+                   Hello, my name is Kusemererwa Moses, a graduate student at Makerere University. 
+                   I am conducting a study focused on finding out how ethical behaviour might affect 
+                   compliance with donor reporting requirements for NGOs in Uganda. 
+                   The findings of this study are expected to contribute to improving compliance rates 
+                   in order to attract more donations in Uganda. 
+                   <p/> 
+	           </b>
+            </h6>
+        </div>
+        <div class="col-md-2"> 
+           <center>
+            <div>Recommendation Letter </div>
+            <div>
+            <a href="Recommendation Letter-Kusemererwa.pdf" target="_blank">
+            <div id="letter-thumb">
+                <img src="images/recommendation-letter.png" width="98%"/>
+            </div>
+            </a>
+            </div>
+            </center>
+        </div>
+    </div> <!-- /self-intro-div -->
+  </div>
+    
+  <div class="row" style="position:relative"> 
+    <div class="col-md-8 order-md-1" style="color:blue;"> 
+	   <p>
+	   For privacy reasons, all data collected will be treated with utmost confidentiality and used only 
+	   for academic purposes. Accordingly, do not provide your organisation’s name, but tick the boxes or 
+	   fill in the blank spaces provided using the appropriate option(s).  
+	   Your participation is highly appreciated in advance.
+	   <p/>
+         <!-- -------form guide------- -->
+         <hr/>
+         <div style="color:gray">
+            <i><b>FORM GUIDE: </b>
+            Our system will intelligently identify all responses from the same organisation and 
+            merge them into one complete document. So it's okay to submit a partly filled form in case 
+            some fields are not applicable to you, then your colleages can fill the part you left empty.</i>
+         </div>
+         <hr/>
+        <!-- -------question 1------- -->
+        <div class="row"> 
+          <div class="col-md-8 mb-3"> 
+            <label for="prodID">1. Personal information: </label> 
+          </div>
+          <div class="col-md-6 mb-3"> 
+            <label for="prodID">Your name: </label>
+            <input type="text" class="form-control" id="respondentname" placeholder="" value="" required>
+            <div class="invalid-feedback"> Your name is required </div>
+          </div>
+          <div class="col-md-2 mb-3">
+            <label for="prodTittle">Gender</label>
+            <input type="text" class="form-control" list="genderoptions" id="respondentgender" placeholder="" value="" required/>
+            <datalist id="genderoptions">
+                <option>Male</option>
+                <option>Female</option>
+            </datalist>
+            <div class="invalid-feedback">
+              gender is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="prodTittle">Title</label>
+            <input type="text" class="form-control" id="respondenttitle" placeholder="" value="" required/>
+            <div class="invalid-feedback">
+              Title is required.
+            </div>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="respondentorg">Your agency name</label>
+            <input type="text" class="form-control" id="respondentorg" placeholder="" value="" required/>
+            <div class="invalid-feedback">
+              Your organisation is required.
+            </div>
+          </div>
+        </div>
+        <hr/>
+        <!-- -------question 2------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="2">2. Please specify your agency’s operating status, as below: </td>
+		        </tr>
+		        <tr>
+		        <td  colspan="2">
+		         <div class="row">
+                  <div class="col-md-7 mb-3"> 
+                    <label for="physicalAddr">Physical address </label>
+                    <input type="text" class="form-control" id="physicalAddr" placeholder="" value="" required>
+                    <div class="invalid-feedback"> Physical address is required </div>
+                  </div>
+                  <div class="col-md-5 mb-3">
+                    <label for="District">District</label>
+                    <input type="text" class="form-control" id="District" placeholder="" value="" required/>
+                    <div class="invalid-feedback">
+                      District is required.
+                    </div>
+                  </div> 
+                </div>
+                </td>
+		        </tr>
+		        <tr>
+			        <td width="40%"> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="org-permit-radio1" name="permit" type="radio" class="custom-control-input" value="Permit No"/> 
+					        <label class="custom-control-label" for="org-permit-radio1">Permit No.</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="org-permit-radio2" name="permit" type="radio" class="custom-control-input" value="Still processing permit"/> 
+					        <label class="custom-control-label" for="org-permit-radio2">Still processing it</label> 
+				        </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>
+				        <input type="text" class="form-control" id="org-permit-number" style="width:60%"> 
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="org-permit-radio3" name="permit" type="radio" class="custom-control-input" value="None"/>
+			            <label class="custom-control-label" for="org-permit-radio3">None of the above</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+			 <hr/>
+		<!-- -------question 3------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3">3. How long has the agency operated in Uganda? (years) </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="op-time-radio1" name="op-time" type="radio" class="custom-control-input" value="1-5 years"/> 
+					        <label class="custom-control-label" for="op-time-radio1">1-5 years</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="op-time-radio2" name="op-time" type="radio" class="custom-control-input" value="6-10 years"/> 
+					        <label class="custom-control-label" for="op-time-radio2">6-10 years</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="op-time-radio3" name="op-time" type="radio" class="custom-control-input" value="11 + years"/>
+			            <label class="custom-control-label" for="op-time-radio3">11 + years</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        <!-- -------question 4------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td>4. How many people are employed by the agency country wide? 
+			        <label for="number-of-employees">Give the number :</label> 
+			        </td> 
+			        <td>  
+				        <input type="number" class="form-control" id="number-of-employees"> 
+			        </td>
+		        </tr> 
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <!-- -------question 5------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="4">5. Are there some NGOs/IPs that your agency funds in Uganda?
+			        <label for="ngos-sponsored">Give the number :</label> 
+			        </td>
+		        </tr>
+		        <tr>
+			        <td style="width:20%"> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="ngos-sponsored-radio1" name="ngos-sponsored" type="radio" class="custom-control-input" value="Yes"/> 
+					        <label class="custom-control-label" for="ngos-sponsored-radio1">Yes</label> 
+					     </div>
+			        </td>
+			        <td style="width:20%">  
+				        <div class="custom-control custom-radio"> 
+					        <input id="ngos-sponsored-radio2" name="ngos-sponsored" type="radio" class="custom-control-input" value="No"/> 
+					        <label class="custom-control-label" for="ngos-sponsored-radio2">No</label> 
+				        </div>
+			        </td>
+			        <td>
+			        <label for="ngos-sponsored">If yes, about how many? Give the number:</label> 
+			        </td> 
+			        <td>  
+				        <input type="number" class="form-control" id="ngos-sponsored"> 
+			        </td>
+		        </tr>  
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        <!-- -------question 6------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3">6. Using the budget model, how has been the flow of your funding to Ugandan IPs in the last 5 years? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-radio1" name="how-effective-y1" type="radio" class="custom-control-input" value="Year 1: Increase"/> 
+					        <label class="custom-control-label" for="how-effective-radio1">Year 1: Increase</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-radio2" name="how-effective-y1" type="radio" class="custom-control-input" value="Year 1: Constant"/> 
+					        <label class="custom-control-label" for="how-effective-radio2">Year 1: Constant</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="how-effective-radio3" name="how-effective-y1" type="radio" class="custom-control-input" value="Year 1: Decrease"/>
+			            <label class="custom-control-label" for="how-effective-radio3">Year 1: Decrease</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y2-radio1" name="how-effective-y2" type="radio" class="custom-control-input" value="Year 2: Increase"/> 
+					        <label class="custom-control-label" for="how-effective-y2-radio1">Year 2: Increase</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y2-radio2" name="how-effective-y2" type="radio" class="custom-control-input" value="Year 2: Constant"/> 
+					        <label class="custom-control-label" for="how-effective-y2-radio2">Year 2: Constant</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="how-effective-y2-radio3" name="how-effective-y2" type="radio" class="custom-control-input" value="Year 2: Decrease"/>
+			            <label class="custom-control-label" for="how-effective-y2-radio3">Year 2: Decrease</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y3-radio1" name="how-effective-y3" type="radio" class="custom-control-input" value="Year 3: Increase"/> 
+					        <label class="custom-control-label" for="how-effective-y3-radio1">Year 3: Increase</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y3-radio2" name="how-effective-y3" type="radio" class="custom-control-input" value="Year 3: Constant"/> 
+					        <label class="custom-control-label" for="how-effective-y3-radio2">Year 3: Constant</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="how-effective-y3-radio3" name="how-effective-y3" type="radio" class="custom-control-input" value="Year 3: Decrease"/>
+			            <label class="custom-control-label" for="how-effective-y3-radio3">Year 3: Decrease</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y4-radio1" name="how-effective-y4" type="radio" class="custom-control-input" value="Year 4: Increase"/> 
+					        <label class="custom-control-label" for="how-effective-y4-radio1">Year 4: Increase</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y4-radio2" name="how-effective-y4" type="radio" class="custom-control-input" value="Year 4: Constant"/> 
+					        <label class="custom-control-label" for="how-effective-y4-radio2">Year 4: Constant</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="how-effective-y4-radio3" name="how-effective-y4" type="radio" class="custom-control-input" value="Year 4: Decrease"/>
+			            <label class="custom-control-label" for="how-effective-y4-radio3">Year 4: Decrease</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y5-radio1" name="how-effective-y5" type="radio" class="custom-control-input" value="Year 5: Increase"/> 
+					        <label class="custom-control-label" for="how-effective-y5-radio1">Year 5: Increase</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="how-effective-y5-radio2" name="how-effective-y5" type="radio" class="custom-control-input" value="Year 5: Constant"/> 
+					        <label class="custom-control-label" for="how-effective-y5-radio2">Year 5: Constant</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="how-effective-y5-radio3" name="how-effective-y5" type="radio" class="custom-control-input" value="Year 5: Decrease"/>
+			            <label class="custom-control-label" for="how-effective-y5-radio3">Year 5: Decrease</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <!-- -------question 7------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="5">7. Can NGOs/IPs registration with government, in some ways, affect their compliance with your grant reporting requirements? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="org-reg-radio1" name="org-reg" type="radio" class="custom-control-input" value="Yes"/> 
+					        <label class="custom-control-label" for="org-reg-radio1">Yes</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="org-reg-radio2" name="org-reg" type="radio" class="custom-control-input" value="No"/> 
+					        <label class="custom-control-label" for="org-reg-radio2">No</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="org-reg-radio3" name="org-reg" type="radio" class="custom-control-input" value="Sometimes"/>
+			            <label class="custom-control-label" for="org-reg-radio3">Sometimes</label>
+			           </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="org-reg-radio4" name="org-reg" type="radio" class="custom-control-input" value="Not sure"/>
+			            <label class="custom-control-label" for="org-reg-radio4">Not sure</label>
+			           </div>
+			        </td> 
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <!-- -------question 8------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="5">8. On a scale of 1-5, how would you rate the integrity of your Ugandan Partners in complying with the reporting requirements? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="rating-radio1" name="rating" type="radio" class="custom-control-input" value="1"/> 
+					        <label class="custom-control-label" for="rating-radio1">1</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="rating-radio2" name="rating" type="radio" class="custom-control-input" value="2"/> 
+					        <label class="custom-control-label" for="rating-radio2">2</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="rating-radio3" name="rating" type="radio" class="custom-control-input" value="3"/>
+			            <label class="custom-control-label" for="rating-radio3">3</label>
+			           </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="rating-radio4" name="rating" type="radio" class="custom-control-input" value="4"/>
+			            <label class="custom-control-label" for="rating-radio4">4</label>
+			           </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="rating-radio5" name="rating" type="radio" class="custom-control-input" value="5"/>
+			            <label class="custom-control-label" for="rating-radio5">5</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <!-- -------question 9------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="5">9. Do you think prior beneficiary consultations & pubic access to NGO reports enhance compliance with your grant reporting requirements? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="transparency-radio1" name="consultations" type="radio" class="custom-control-input" value="Yes"/> 
+					        <label class="custom-control-label" for="transparency-radio1">Yes</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="transparency-radio2" name="consultations" type="radio" class="custom-control-input" value="No"/> 
+					        <label class="custom-control-label" for="transparency-radio2">No</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="transparency-radio3" name="consultations" type="radio" class="custom-control-input" value="sometimes"/>
+			            <label class="custom-control-label" for="transparency-radio3">sometimes</label>
+			           </div>
+			        </td> 
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="transparency-radio5" name="consultations" type="radio" class="custom-control-input" value="Not sure"/>
+			            <label class="custom-control-label" for="transparency-radio5">Not sure</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <!-- -------question 10------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="5">10. On a scale of 1-5, how would you rate the culture of transaction documentation by your IPs in Uganda as required by both the donors & government? </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-radio"> 
+					        <input id="documenting-radio1" name="documenting" type="radio" class="custom-control-input" value="1"/> 
+					        <label class="custom-control-label" for="documenting-radio1">1</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-radio"> 
+					        <input id="documenting-radio2" name="documenting" type="radio" class="custom-control-input" value="2"/> 
+					        <label class="custom-control-label" for="documenting-radio2">2</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="documenting-radio3" name="documenting" type="radio" class="custom-control-input" value="3"/>
+			            <label class="custom-control-label" for="documenting-radio3">3</label>
+			           </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="documenting-radio4" name="documenting" type="radio" class="custom-control-input" value="4"/>
+			            <label class="custom-control-label" for="documenting-radio4">4</label>
+			           </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="documenting-radio5" name="documenting" type="radio" class="custom-control-input" value="5"/>
+			            <label class="custom-control-label" for="documenting-radio5">5</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        <!-- -------question 11------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="4">11. How do you communicate your reporting requirements to the NGOs’ staff? (Can pick as many) </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="how-communicate-cbox1" name="how-communicate" type="checkbox" class="custom-control-input" value="1-3 years"/> 
+					        <label class="custom-control-label" for="how-communicate-cbox1">Contracts signed;</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="how-communicate-cbox2" name="how-communicate" type="checkbox" class="custom-control-input" value="4-6 years"/> 
+					        <label class="custom-control-label" for="how-communicate-cbox2">Audit reports;</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-checkbox">
+			            <input id="how-communicate-cbox3" name="how-communicate" type="checkbox" class="custom-control-input" value="7 + years"/>
+			            <label class="custom-control-label" for="how-communicate-cbox3">Approved IP policies;</label>
+			           </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-checkbox">
+			            <input id="how-communicate-cbox4" name="how-communicate" type="checkbox" class="custom-control-input" value="7 + years"/>
+			            <label class="custom-control-label" for="how-communicate-cbox4">Government legislation</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        <!-- -------question 12------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="4">12. What support does your agency give to the IPs to ensure that program and 
+			        financial reports are submitted per the set standards? (Can pick multiple options) </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="what-support-cbox1" name="what-support" type="checkbox" class="custom-control-input" value="Supervision visits"/> 
+					        <label class="custom-control-label" for="what-support-cbox1">Supervision visits</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="what-support-cbox2" name="what-support" type="checkbox" class="custom-control-input" value="Inter-agency audits"/> 
+					        <label class="custom-control-label" for="what-support-cbox2">Inter-agency audits</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-checkbox">
+			            <input id="what-support-cbox3" name="what-support" type="checkbox" class="custom-control-input" value="External audits"/>
+			            <label class="custom-control-label" for="what-support-cbox3">External audits</label>
+			           </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-checkbox">
+			            <input id="what-support-cbox4" name="what-support" type="checkbox" class="custom-control-input" value="Staff trainings"/>
+			            <label class="custom-control-label" for="what-support-cbox4">Staff trainings</label>
+			           </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-checkbox">
+			            <input id="what-support-cbox5" name="what-support-all" type="checkbox" class="custom-control-input" value="All the options"/>
+			            <label class="custom-control-label" for="what-support-cbox5">All the options</label>
+			           </div>
+			        </td>
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        <!-- -------question 13------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3">13. How often does your agency carry out the chosen activity (ies) above? </td>
+		        </tr>
+		        <tr>
+			        <td>
+					   <div class="custom-control custom-checkbox">
+			            <input id="how-often-cbox1" name="how-often" type="checkbox" class="custom-control-input" value="Monthly"/>
+			            <label class="custom-control-label" for="how-often-cbox1">Monthly</label>
+			           </div>
+			        </td>
+			        <td>
+				       <div class="custom-control custom-checkbox">
+			            <input id="how-often-cbox2" name="how-often" type="checkbox" class="custom-control-input" value="Quarterly"/>
+			            <label class="custom-control-label" for="how-often-cbox2">Quarterly</label>
+			           </div>
+			        </td>
+			        <td>
+			           <div class="custom-control custom-checkbox">
+			            <input id="how-often-cbox3" name="how-often" type="checkbox" class="custom-control-input" value="Semi-annually"/>
+			            <label class="custom-control-label" for="how-often-cbox3">Semi-annually</label>
+			           </div>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>
+					   <div class="custom-control custom-checkbox">
+			            <input id="how-often-cbox4" name="how-often" type="checkbox" class="custom-control-input" value="Annually"/>
+			            <label class="custom-control-label" for="how-often-cbox4">Annually</label>
+			           </div>
+			        </td>
+			        <td>
+				       <div class="custom-control custom-checkbox">
+			            <input id="how-often-cbox5" name="how-often-all" type="checkbox" class="custom-control-input" value="All the options"/>
+			            <label class="custom-control-label" for="how-often-cbox5">All the options</label>
+			           </div>
+			        </td>
+			        <td>
+			           <div class="custom-control custom-checkbox">
+			            <input id="how-often-cbox6" name="how-often-none" type="checkbox" class="custom-control-input" value="None"/>
+			            <label class="custom-control-label" for="how-often-cbox6">None</label>
+			           </div>
+			        </td>
+		        </tr> 
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        <!-- -------question 14------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="2">14. What is your impression about the quality of reports submitted by the IPs in terms of 
+				        completeness, accuracy and timeliness? (It’s ok to pick multiple options) 
+			        </td>
+		        </tr>
+		        <tr>
+			        <td style="text-align:left;"> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="impression-cbox1" name="impression" type="checkbox" class="custom-control-input" value="Compliant" style="float:left"/> 
+						     <label class="custom-control-label" for="impression-cbox1">Compliant (Specify number of IPs)</label>
+					     </div>
+			        </td> 
+			        <td>
+				        <input type="number" class="form-control" id="impression-number1" placeholder=" 0 -">
+			        </td> 
+		        </tr>
+		        <tr>
+			        <td style="width:80%"> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="impression-cbox2" name="impression" type="checkbox" class="custom-control-input" value="Partially compliant"/> 
+						     <label class="custom-control-label" for="impression-cbox2">Partially compliant (Specify number of IPs)</label>
+					     </div>
+			        </td> 
+			        <td>
+				        <input type="number" class="form-control" id="impression-number2" placeholder=" 0 -"/>
+			        </td> 
+		        </tr>
+		        <tr>
+			        <td style="width:80%"> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="impression-cbox3" name="impression" type="checkbox" class="custom-control-input" value="Non-compliant"/> 
+						     <label class="custom-control-label" for="impression-cbox3">Non-compliant (Specify number of IPs)</label>
+					     </div>
+			        </td> 
+			        <td>
+				        <input type="number" class="form-control" id="impression-number3" placeholder=" 0 -">
+			        </td> 
+		        </tr>
+		        <tr>
+			        <td style="width:80%"> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="impression-cbox4" name="impression" type="checkbox" class="custom-control-input" value="Unclassified"/> 
+						     <label class="custom-control-label" for="impression-cbox4">Unclassified (Specify number of IPs)</label>
+					     </div>
+			        </td> 
+			        <td>
+				        <input type="number" class="form-control" id="impression-number4" placeholder=" 0 -">
+			        </td> 
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+        <!-- -------question 15------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="2">15. Using audit model, what opinions are common amongst your IPs in the last 5 years?  </td>
+		        </tr>
+		        <tr>
+			        <td style="text-align:left;"> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="common-options-cbox1" name="common-options" type="checkbox" class="custom-control-input" value="Unqualified" style="float:left"/> 
+						     <label class="custom-control-label" for="common-options-cbox1">Unqualified (Specify number of IPs)</label>
+					     </div>
+			        </td> 
+			        <td>
+				        <input type="number" class="form-control" id="common-options-number1" placeholder=" 0 -">
+			        </td> 
+		        </tr>
+		        <tr>
+			        <td style="width:80%"> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="common-options-cbox2" name="common-options" type="checkbox" class="custom-control-input" value="Qualified"/> 
+						     <label class="custom-control-label" for="common-options-cbox2">Qualified (Specify number of IPs)</label>
+					     </div>
+			        </td> 
+			        <td>
+				        <input type="number" class="form-control" id="common-options-number2" placeholder=" 0 -"/>
+			        </td> 
+		        </tr>
+		        <tr>
+			        <td style="width:80%"> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="common-options-cbox3" name="common-options" type="checkbox" class="custom-control-input" value="Disclaimer"/> 
+						     <label class="custom-control-label" for="common-options-cbox3">Disclaimer (Specify number of IPs)</label>
+					     </div>
+			        </td> 
+			        <td>
+				        <input type="number" class="form-control" id="common-options-number3" placeholder=" 0 -">
+			        </td> 
+		        </tr> 
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        <!-- -------question 16------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="3">16. What issues have been emphasized in the last 5 annual audits? Tick as appropriate </td>
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="what-issues-cbox1" name="what-issues" type="checkbox" class="custom-control-input" value="Missing receipts/documents"/> 
+					        <label class="custom-control-label" for="what-issues-cbox1">Missing receipts/documents</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="what-issues-cbox2" name="what-issues" type="checkbox" class="custom-control-input" value="Poor filing system"/> 
+					        <label class="custom-control-label" for="what-issues-cbox2">Poor filing system</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-checkbox">
+			            <input id="what-issues-cbox3" name="what-issues" type="checkbox" class="custom-control-input" value="Late report submissions"/>
+			            <label class="custom-control-label" for="what-issues-cbox3">Late report submissions</label>
+			           </div>
+			        </td> 
+		        </tr>
+		        <tr>
+			        <td> 
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="what-issues-cbox4" name="what-issues" type="checkbox" class="custom-control-input" value="Inaccurate reporting"/> 
+					        <label class="custom-control-label" for="what-issues-cbox4">Inaccurate reporting</label> 
+					     </div>
+			        </td>
+			        <td>  
+				        <div class="custom-control custom-checkbox"> 
+					        <input id="what-issues-cbox5" name="what-issues" type="checkbox" class="custom-control-input" value="Late/non-remittance of due taxes"/> 
+					        <label class="custom-control-label" for="what-issues-cbox5">Late/non-remittance of due taxes</label> 
+				        </div>
+			        </td>
+			        <td>
+				        <div class="custom-control custom-checkbox">
+			            <input id="what-issues-cbox6" name="what-issues-all" type="checkbox" class="custom-control-input" value="All the above"/>
+			            <label class="custom-control-label" for="what-issues-cbox6">All the above</label>
+			           </div>
+			        </td> 
+		        </tr>
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        <!-- -------question 17------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr>
+			        <td colspan="2">17. What are your suggestions in overcoming the challenges for non-compliance? </td>
+		        </tr>
+		        <tr>
+			        <td> <br/> a) </td>
+			        <td style="padding:0 0 0 5%">  
+				        <br/>
+				        <input type="text" class="form-control" id="donor-suggestion1" style="width:100%"> 
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> <br/> b) </td>
+			        <td style="padding:0 0 0 5%">
+				        <br/>
+				        <input type="text" class="form-control" id="donor-suggestion2" style="width:100%"> 
+			        </td>
+		        </tr>
+		        <tr>
+			        <td> <br/> c) </td>
+			        <td style="padding:0 0 0 5%">
+				        <br/>
+				        <input type="text" class="form-control" id="donor-suggestion3" style="width:100%"> 
+			        </td>
+		        </tr> 
+          </table>
+        </div> <!-- --- -->
+        <hr/>
+          
+        <!-- -------comclusion------- -->
+        <div class="mb-3"> 
+          <table width="100%" class="question-table">
+		        <tr> <td> Thank you very much for your responses. Your agency will get summary feedback of findings. </td> </tr> 
+          </table>
+        </div> <!-- --- -->
+        <hr/> 
+        
+        <div id="formfeedback-box"> 
+	        <center> 
+			     <img src="images/AjaxLoader.gif" width="30px" /><br/> 
+		        uploading ... 
+	        </center> 
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" id="submit-response-btn" onclick="readDonorForm()">Submit now</button>
+    </div> 
+    <!--right isde bar -->
+    <div class="col-md-4 order-md-2 mb-4 oon" id="right-sidebar">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Answered</span>
+        <span class="badge badge-secondary badge-pill">0</span>
+        <span>of</span>
+        <span class="badge badge-secondary badge-pill">9</span>
+      </h4>
+      <ul class="list-group mb-3"> 
+        <li class="list-group-item d-flex justify-content-between lh-condensed" id="contact-messages-link"> 
+          <div style="width:80%">
+            <div id="form-fill-progress-bar" style="border:1px solid skyblue; border-radius:10px; height:100%; padding:4px;">
+	            <div id="form-fill-progress-solid" style="width:var(--formprogress,45%); background:cyan; border:1px solid cyan; border-radius:10px; height:100%;"> </div>
+            </div>
+          </div>
+          <span class="text-muted">45%</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Preview output document</h6>
+            <small class="text-muted">View how the document to be sent will <br/>look like</small>
+          </div>
+          <div id="preview-thumb">
+	          <!-- preview details to be populated here -->
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Save to continue later</h6>
+            <small class="text-muted">You can pause filling this form in case you <br/>are interrupted for now</small>
+          </div>
+          <span class="text-muted"><button>Save </button></span>
+        </li>
+        <a href="#" title="
+        HIRE ME: 
+        Eng. Ategyeka Rodgers 
+        the developer of this 
+        data collection tool 
+        atrodgers77@gmail.com, 
+        +256 781 224 508">
+        <li class="list-group-item d-flex justify-content-between bg-light">
+          <div class="text-success" style="width:80%">
+            <h6 class="my-0"><u>Advert</u></h6>
+            <small>SOFTWARE ENGINEER AVAILABLE FOR HIRE: Call +256 781 224 508</small>
+          </div>
+          <img src="images/rodgers.png" width="17%" style="float:right; border:3px solid linen; border-radius:4px;"/>
+        </li></a>
+        <li class="list-group-item d-flex justify-content-between">
+          <span style="float:left"> Print the output document  </span>
+         <img src="my-icons/file-pdf.svg" width="7%" style="float:right; "/>
+        </li>
+      </ul> 
+      <form class="card p-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="... ">
+          <div class="input-group-append">
+            <button class="btn btn-secondary">Comment</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--/right isde bar -->
+  </div>  
+</div>
+
+<footer style="text-align:center">
+	  <hr/>
+	  <small>
+    <p class="mb-1">&copy; <script>document.write(new Date().getFullYear());</script> Software Development projects by Eng. Ategyeka Rodgers <br/>
+	    <img src="my-icons/phone-alt.svg" width="20px"/> +256 781 224 508, 
+	    <img src="my-icons/ic_mail_outline_black_24dp.png" width="20px"/> atrodgers77@gmail.com
+    </p>
+    </small>
+    <br/>
+</footer>
+<script type="text/javascript" src="jqr/jq_file.js"></script>
+<script type="text/javascript" src="jqr/jquery.PrintArea.js"></script>
+<script src="js/wmo-plain.js"></script>
+<script src="js/get-url-query-paramss.js"></script>
+<script src="js/reconnecting-websocket.min.js" type="text/javascript"></script>
+<script src="js/read-donor-form.js"></script>
+<script> 
+$(document).ready(function(){
+	$("#sidebar-toggle-btn").click(function(){
+		if($("#right-sidebar").hasClass("oof")){
+			$("#right-sidebar").removeClass("oof").addClass("oon");
+		}else{ $("#right-sidebar").removeClass("oon").addClass("oof"); }
+	});    
+}); 
+</script>
+</body>
+</html>

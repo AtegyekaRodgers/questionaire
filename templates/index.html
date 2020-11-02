@@ -24,16 +24,7 @@
         -ms-user-select: none;
         user-select: none;
       }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      @media (min-width: 700px) {
-        //#right-sidebar{ position:fixed; right:0; top:10%; float:right;}
-      }
-      
+ 
       #descr{ width:100%; border-radius:5px; min-height:150px; border:1px solid lightgray; text-align:left; }
       #listItems{ width:100%; border-radius:5px; min-height:160px; border:1px solid lightgray; text-align:left; }
       #addescrption-section-btn1{ border:1px solid gray; float:right; width:25px; text-align:center; border-radius:12px }
@@ -48,131 +39,168 @@
       input[type="radio"]:checked{ padding:3px; border-radius:2px; background:skyblue; border:2px solid blue; width:20px; }
       .question-table td{ color:blue }
       #researcher-photo{ border:3px solid linen; border-radius:10px;}
+      #designer-footer-info{ position:relative; bottom:0; width:100%; padding:10px 0 10px 0; border-top:1px solid lightgray; }
+      #researcher-photo{ border:1px solid lightgray; border-radius:10px; vertical-align:top;}
+      #letter-thumb{ width:70%; min-height:100px; box-shadow:0 0 10px 1px lightgray;}
+      #footer-left-div{ width:70%; text-align:left; float:left; }
+      #footer-right-div{ width:30%; text-align:left; float:left; border:2px solid lightgray; border-radius:4px; padding:4px 4px 4px 5px; background-color:rgb(245 245 245, 0.9);}    
+      
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+           font-size: 3.5rem;
+        }
+      }
+      
+      @media (min-width: 700px) {
+        
+      }
+      
       @media(max-width: 600px){
-        #researcher-photo{float:center;  border:3px solid linen; border-radius:10px; vertical-align:top;}
+        #researcher-photo{ float:center;  border:3px solid linen; border-radius:10px; vertical-align:top; width:60%; }
+        #researcher-photo-div{ text-align:center; } 
+        #footer-left-div{ width:100%; margin-bottom:10px; }
+        #footer-right-div{ width:100%; margin-bottom:10px; } 
       }
     </style>
     <!-- Custom styles for this template -->
     <!-- <link href="/static/form-validation.css" rel="stylesheet"> -->
   </head>
   <body class="bg-light">
-  <div class="container">
+  <div class="container"style="90%">
   <table width="100%">
 	  <tr>
-		  <td style="width:30%; "> <img src="/static/images/mak-log-clear.png" width="30%"/> MAKERERE UNIVERSITY </td>
-		  <td style="text-align:center"> </td>
-		  <td style="width:30%; text-align:right"> DATA COLLECTION TOOL <img src="/static/images/dctt.png" width="30%" /> </td>
+		  <td style="width:30%; font-size:0.9em"> <img src="/static/images/mak-log-clear.png" width="25%"/> MAKERERE UNIVERSITY </td>
+		  <td style="text-align:center"> 
+	        <div style="text-align:center; color:blue">
+	        <p style="font-size:0.7em; ">
+	        Study By 
+            <br/><b>Kusemererwa Moses</b> 
+            <br/>2018/HD06/3491U </p> 
+            <p style="font-size:0.7em"> Supervised by:<br/>
+                Dr. Gerald Kasigwa <br/>
+                Dr. Festo Nyende Tusubira
+            </p>
+            </div>
+		  </td>
+		  <td style="width:30%; text-align:right; font-size:0.9em"> <span id="dct-label">DATA COLLECTION TOOL</span> <img src="/static/images/dctt.png" width="23%" /> </td>
 	  </tr>
   </table> 
   
   <!--=================================================================================-->
-  <br/>
-  <br/>
+  <br/> 
+   <div id="self-intro-div" class="row">
+        <div class="col-md-2" id="researcher-photo-div">
+         <img src="/static/images/MOSES.JPG" width="80%" id="researcher-photo"/>
+        </div>
+        <div class="col-md-8" style="font-size:0.8em"> 
+            <h6 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white; padding:3px"> 
+	           <b>
+               <p><br/>
+               Hello, my name is Kusemererwa Moses, an MBA student at Makerere University. 
+               I’m conducting a study focusing on how ethical behaviour might affect compliance with 
+               donor reporting requirements for NGOs in Uganda. The findings of this study are expected to 
+               contribute to improving compliance rates & effectiveness of interventions, in order to 
+               attract more donations in Uganda. For privacy reasons, all data collected will be treated with 
+               utmost confidentiality and used only for academic purposes. 
+               <p/> 
+	           </b>
+            </h6>
+        </div>
+        <div class="col-md-2"> 
+           <center>
+            <div style="font-size:0.7em">Recommendation Letter </div>
+            <div>
+            <a href="/static/Recommendation Letter-Kusemererwa.pdf" target="_blank">
+                <div id="letter-thumb">
+                    <img src="/static/images/recommendation-letter.png" width="98%"/>
+                </div>
+            </a>
+            </div>
+            </center>
+        </div>
+    </div> <!-- /self-intro-div -->
+  
+   <!--=================================================================================-->
  <hr/>
-  <div class="row" style="position:relative"> 
-    <div class="col-md-12" style="color:blue;"> 
-        
+  <div class="row"> 
+    <div class="col-md-12" style="color:blue;">  
         <center>
         <div class="row" style="text-align:center">
-         
-          <div id="proceed-as-regulator" class="col-md-2" onclick="enforceToken('proceed-as-regulator')"> 
-            <a href="#">
-                <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white,0 0 12px lightgray; padding:3px; min-height:100px; text-align:center"> 
-		            <small>Proceed as a </small><br/><br/>
-		            <b style="font-size:0.7em">Regulating agency</b>
-			    </h5>
-			</a>
-          </div>
-          <div id="proceed-as-donor" class="col-md-2" onclick="enforceToken('proceed-as-donor')">  
-			    <a href="#">
-			    <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white,0 0 12px lightgray; padding:3px; min-height:100px; text-align:center"> 
-				    <small>Proceed as a </small><br/><br/>
-				    <b style="font-size:0.8em">Donor agency</b>
-			    </h5> 
-			    </a>
-          </div> 
-          <div id="proceed-as-ngo" class="col-md-2" onclick="enforceToken('proceed-as-ngo')"> 
-            <a href="#">
-                <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white,0 0 12px lightgray; padding:3px; min-height:100px; text-align:center"> 
-		            <small>Proceed as: </small><br/><br/>
-		            <b style="font-size:0.8em">Partner/NGO</b>
-			    </h5>
-			</a>
-          </div>
-           
-          <div class="col-md-2"> 
-             <img src="/static/images/MOSES.JPG" width="55%" id="researcher-photo"/>
-          </div>
-          <div class="col-md-4"> 
-             <h4>Welcome to this data collection system </h4>
-             <p>Thank you for considering to support our research project</p>
-          </div>
           
+          <br/>
+          <div class="col-md-12"> 
+             <h3>Welcome to this data collection system </h3>
+             <p>Thank you for considering to contribute to this study</p>
+          </div> 
+          <br/>
+          <br/>
+          
+          <div id="proceed-as-regulator" class="col-md-4" onclick="enforceToken('proceed-as-regulator','{{.ServerPort}}')"> 
+            <a href="#">
+            <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white,0 0 12px lightgray; padding:3px; min-height:100px; text-align:center"> 
+	            <small>Proceed as a </small><br/><br/>
+	            <b style="font-size:0.9em">Regulating agency</b>
+		    </h5>
+			</a>
+          </div>
+          <div id="proceed-as-donor" class="col-md-4" onclick="enforceToken('proceed-as-donor','{{.ServerPort}}')">  
+		    <a href="#">
+		    <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white,0 0 12px lightgray; padding:3px; min-height:100px; text-align:center"> 
+			    <small>Proceed as a </small><br/><br/>
+			    <b style="font-size:0.9em">Donor agency</b>
+		    </h5> 
+		    </a>
+          </div> 
+          <div id="proceed-as-ngo" class="col-md-4" onclick="enforceToken('proceed-as-ngo','{{.ServerPort}}')"> 
+            <a href="#">
+            <h5 style="border:1px solid lightgray; border-radius:6px; box-shadow:inset 0 0 12px 2px white,0 0 12px lightgray; padding:3px; min-height:100px; text-align:center"> 
+	            <small>Proceed as: </small><br/><br/>
+	            <b style="font-size:0.9em">Partner/NGO</b>
+		    </h5>
+			</a>
+          </div>  
         </div> 
         </center>
          
     </div> 
   </div>  
 </div>
-
-<footer style="text-align:center">
-	  <hr/> 
-	  <br/>
-	  <br/>
-	  <br/>
-	  <div id="hidden-email-box"><center>{{.Email}}</center></div>
-	  <br/>
-	  <br/>
-	  <small>
-    <p class="mb-1">&copy; <script>document.write(new Date().getFullYear());</script> Software Development projects by Eng. Rodgers Ategyeka <br/>
-	    <img src="/static/my-icons/phone-alt.svg" width="20px"/> +256 781 224 508, 
-	    <img src="/static/my-icons/ic_mail_outline_black_24dp.png" width="20px"/> atrodgers77@gmail.com
+<div>
+ <br/> 
+ <br/> 
+ <div id="hidden-email-box"><center>{{.Email}}</center></div>  
+ <br/> 
+ <br/> 
+ </di>
+<div id="footer" style="text-align:center; position:relative; float:left; width:100%"> 
+	<small> 
+    <p class="mb-1" id="designer-footer-info">  
+        <div style="width:90%; float:left; margin-left:5%" id="footer-content-div"> 
+            <div id="footer-left-div"> 
+                &copy; <script>document.write(new Date().getFullYear());</script> Software Development projects by <br/> <br/> Eng. Rodgers Ategyeka
+                <span style="margin-left:5%"><img src="/static/my-icons/phone-alt.svg" width="20px"/> +256 781 224 508, </span> 
+                <span style="margin-left:5%"><img src="/static/my-icons/ic_mail_outline_black_24dp.png" width="20px"/> atrodgers77@gmail.com </span> 
+            </div>
+            <div id="footer-right-div"> 
+              <div class="text-success" style="width:80%; float:left;">
+                <h6 class="my-0"><u>Hire me</u></h6>
+                <small>SOFTWARE ENGINEER AVAILABLE FOR HIRE.
+                <br/>For similar or more projects. 
+                <br/> Call: +256 781 224 508</small>
+                <br/> Email: atrodgers77@gmail.com</small>
+              </div>
+              <img src="/static/images/rodgers.png" width="20%" 
+              style="float:right; border:3px solid linen; border-radius:4px;"/> 
+            </div> 
+        </div>  
     </p>
     </small>
     <br/>
-</footer>
+</div>
 <script type="text/javascript" src="/static/jqr/jq_file.js"></script>
 <script type="text/javascript" src="/static/jqr/jquery.PrintArea.js"></script> 
- 
-<script>
-var respondentemail = document.querySelector("#hidden-email-box").textContent;
-console.log("respondentemail = "+respondentemail);
-function enforceToken(id){
-    var targetElementId = id;
-    if(targetElementId=="proceed-as-donor"){
-        var tokenx = prompt("Please enter donor access token: \nHint: Get the token from the email you received from the researcher.");
-        if(tokenx=="6e676f7365726574746f6b656e"){
-            document.getElementById(id).querySelector("a").setAttribute("href","/static/donor.html?pt={{.ServerPort}}&em="+respondentemail).click();
-        }else if(tokenx!="" && tokenx!=null){
-            alert("Incorrect access token! Please enter again.");
-        }
-    }else if(targetElementId=="proceed-as-ngo"){
-        var tokenx = prompt("Please enter ngo access token: \nHint: Get the token from the email you received from the researcher.");
-        if(tokenx=="646f6e6f727365726574746f6b656e"){
-            document.getElementById(id).querySelector("a").setAttribute("href","/static/ngo.html?pt={{.ServerPort}}&em="+respondentemail).click();
-        }else if(tokenx!="" && tokenx!=null){
-            alert("Incorrect access token! Please enter again.");
-        } 
-    }else if(targetElementId=="proceed-as-regulator"){
-        var tokenx = prompt("Please enter regulator access token: \nHint: Get the token from the email you received from the researcher.");
-        if(tokenx=="6572676f7365726574746f6b656e"){
-            document.getElementById(id).querySelector("a").setAttribute("href","/static/regulator.html?pt={{.ServerPort}}&em="+respondentemail).click();
-        }else if(tokenx!="" && tokenx!=null){
-            alert("Incorrect access token! Please enter again.");
-        }
-    }
-}
-
-$(document).ready(function(){
-	$("#sidebar-toggle-btn").click(function(){
-		if($("#right-sidebar").hasClass("oof")){
-			$("#right-sidebar").removeClass("oof").addClass("oon");
-		}else{
-		    $("#right-sidebar").removeClass("oon").addClass("oof");
-		}
-	}); 
-}); 
-</script>
+<script type="text/javascript" src="/static/js/enforce-tokenn.js"></script>
+  
 </body>
 </html>
 

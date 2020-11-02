@@ -111,23 +111,11 @@
     </table>
   </div>
 
-  <div class="row" style="position:relative"> 
-    <div class="col-md-8 order-md-1" style="min-height:70vh ; color:blue; background:white; padding:1% 1% 3% 1%; position:relative;" id="responses-container-div">
-       <div id="loading-gif-container" style="position:absolute; top:20vh; z-index:50; width:96%; padding:2vw; border:1px solid linen">
-           <center> 
-                <img src="/static/images/AjaxLoader.gif" width="40vw" /> loading ... 
-           </center>
-       </div> 
-       All Responses
-    </div> 
-  </div>  
-  <!--right isde bar -->
+  <div class="row" style="position:relative">
     <div class="col-md-4 order-md-2 mb-4 oon" id="right-sidebar">
       <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span class="text-muted">Answered</span>
-        <span class="badge badge-secondary badge-pill">0</span>
-        <span>of</span>
-        <span class="badge badge-secondary badge-pill">9</span>
+        <span class="text-muted">Actions</span>
+        <span class="badge badge-secondary badge-pill">3</span>
       </h4>
       <ul class="list-group mb-3"> 
         <li class="list-group-item d-flex justify-content-between lh-condensed" id="contact-messages-link"> 
@@ -166,23 +154,35 @@
             <h6 class="my-0"><u>Advert</u></h6>
             <small>SOFTWARE ENGINEER AVAILABLE FOR HIRE: Call +256 781 224 508</small>
           </div>
-          <img src="images/rodgers.png" width="17%" style="float:right; border:3px solid linen; border-radius:4px;"/>
+          <img src="/static/images/rodgers.png" width="17%" style="float:right; border:3px solid linen; border-radius:4px;"/>
         </li></a>
         <li class="list-group-item d-flex justify-content-between">
           <span style="float:left"> Print the output document  </span>
-         <img src="my-icons/file-pdf.svg" width="7%" style="float:right; "/>
+         <img src="/static/my-icons/file-pdf.svg" width="7%" style="float:right; "/>
         </li>
       </ul> 
       <form class="card p-2">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="... ">
           <div class="input-group-append">
-            <button class="btn btn-secondary">Comment</button>
+            <button class="btn btn-secondary">Search</button>
           </div>
         </div>
       </form>
     </div>
-    <!--/right isde bar -->
+    <div class="col-md-8 order-md-1" style="min-height:70vh ; color:blue; background:white; padding:1% 1% 3% 1%; position:relative;" id="responses-container-div">
+      
+      <h4 class="mb-3"/>
+	      <img id="sidebar-toggle-btn" src="/static/my-icons/ic_menu_black_18dp.png" width="30px" style="float:right; border:1px solid lightgray; border-radius:4px"/>
+	   </h4> 
+	   <div id="loading-gif-container" style="position:absolute; top:20vh; z-index:50; width:96%; padding:2vw; border:1px solid linen">
+	       <center> 
+	            <img src="/static/images/AjaxLoader.gif" width="40vw" /> loading ... 
+	       </center>
+	   </div> 
+         All Responses
+    </div> 
+  </div>  
 </div>
 
 <footer style="text-align:center">
@@ -195,8 +195,8 @@
     </small>
     <br/>
 </footer>
-<script src="/static/jqr/jq_file.js" type="text/javascript"></script>
-<script src="/static/jqr/jquery.PrintArea.js" type="text/javascript"></script> 
+<script  src="/static/jqr/jq_file.js" type="text/javascript"></script>
+<script src="/static/jqr/jquery.PrintArea.js" type="text/javascript" ></script> 
 <script src="/static/js/get-url-query-paramss.js"></script>
 <script src="/static/js/wmo-plainn.js"></script>
 <script>
@@ -209,7 +209,7 @@
 //---------------------------------------------
  var state = {
     ngo: {
-        token:"646f6e6f727365726574746f6b656e",
+        token:"646f6e",
         questions:{
             qn1:{questionId:"qn1", qnlabel:"1", qnstatement:"Personal information:", iskey:false},
             qn1_a:{questionId:"qn1_a", qnlabel:"a)", qnstatement:"Name", iskey:true},
@@ -221,7 +221,7 @@
             qn3:{questionId:"qn3", qnlabel:"3", qnstatement:"Physical address", iskey:true}, 
             qn3_b:{questionId:"qn3_b", qnlabel:"b", qnstatement:"District:", iskey:true}, 
             qn4:{questionId:"qn4", qnlabel:"4", qnstatement:"How long has the organisation operated in Uganda?:", iskey:false}, 
-            qn5:{questionId:"qn5", qnlabel:"5", qnstatement:"How many people are employed by the organisation country wide? Give number :", iskey:false},
+            qn5:{questionId:"qn5", qnlabel:"5", qnstatement:"How many Ugandans are employed by your organisation country wide? Give number :", iskey:false},
             qn6:{questionId:"qn6", qnlabel:"6", qnstatement:"What calibre of staff does your organisation have to ensure compliance with donor reporting requirements? (Can pick multiple options)", iskey:false},
             qn6_a:{questionId:"qn6_a", qnlabel:"a", qnstatement:"Up to Diploma", iskey:true},
             qn6_b:{questionId:"qn6_b", qnlabel:"b", qnstatement:"First Degree", iskey:true},
@@ -235,7 +235,7 @@
             qn11:{questionId:"qn11", qnlabel:"11", qnstatement:"What do your donors typically require you of in order to give projects’ funding?", iskey:false},  
             qn12:{questionId:"qn12", qnlabel:"12", qnstatement:"Do you feel the donor reporting requirements are fair and therefore achievable by your staff?", iskey:false},
             qn13:{questionId:"qn13", qnlabel:"13", qnstatement:"Do you think donor reporting requirements are necessary?", iskey:false},   
-            qn14:{questionId:"qn14", qnlabel:"14", qnstatement:"What do you suggest could help overcome the challenges to meet donor reporting requirements?", iskey:false},
+            qn14:{questionId:"qn14", qnlabel:"14", qnstatement:"What do you suggest could facilitate NGOs more to comply with the donor reporting requirements?", iskey:false},
         },
         organisations:[
           {
@@ -250,7 +250,7 @@
    },
        
    donor: {
-        token:"6e676f7365726574746f6b656e",
+        token:"6e676f",
         questions:{
             qn1:{questionId:"qn1", qnlabel:"1", qnstatement:"Personal information:", iskey:false},
             qn1_a:{questionId:"qn1_a", qnlabel:"a)", qnstatement:"Name", iskey:true},
@@ -262,10 +262,10 @@
             qn2_a_ii:{questionId:"qn2_a_ii", qnlabel:"", qnstatement:"District:", iskey:true},
             qn2_b:{questionId:"qn2_b", qnlabel:"b", qnstatement:"Permit No:", iskey:true},
             qn3:{questionId:"qn3", qnlabel:"3", qnstatement:"How long has the agency operated in Uganda? (years)", iskey:false},
-            qn4:{questionId:"qn4", qnlabel:"4", qnstatement:"How many people are employed by the agency country wide? Give the number:", iskey:false},
+            qn4:{questionId:"qn4", qnlabel:"4", qnstatement:"How many Ugandans are employed by the agency country wide? Give the number:", iskey:false},
             qn5:{questionId:"qn5", qnlabel:"5", qnstatement:"Are there some NGOs/IPs that your agency funds in Uganda?", iskey:false},
             qn6:{questionId:"qn6", qnlabel:"6", qnstatement:"Using the budget model, how has been the flow of your funding to Ugandan IPs in the last 5 years?", iskey:false},
-            qn7:{questionId:"qn7", qnlabel:"7", qnstatement:"Can NGOs/IPs registration with government, in some ways, affect their compliance with your grant reporting requirements?", iskey:false},   
+            qn7:{questionId:"qn7", qnlabel:"7", qnstatement:"Do you think NGOs/IPs registration with government, in some ways, affect their compliance with your grant reporting requirements? ", iskey:false},   
             qn8:{questionId:"qn8", qnlabel:"8", qnstatement:"On a scale of 1-5, how would you rate the integrity of your Ugandan Partners in complying with the reporting requirements?", iskey:false},   
             qn9:{questionId:"qn9", qnlabel:"9", qnstatement:"Do you think prior beneficiary consultations & pubic access to NGO reports enhance compliance with your grant reporting requirements?", iskey:false},   
             qn10:{questionId:"qn10", qnlabel:"10", qnstatement:"On a scale of 1-5, how would you rate the culture of transaction documentation by your IPs in Uganda as required by both the donors & government?", iskey:false},  
@@ -367,24 +367,28 @@
        ]
     },
     regulator: {
-        token:"6572676f7365726574746f6b656e",
+        token:"657267",
         questions:{
             qn1:{questionId:"qn1", qnlabel:"1", qnstatement:"Personal information:", iskey:false},
             qn1_a:{questionId:"qn1_a", qnlabel:"a)", qnstatement:"Name", iskey:true},
             qn1_b:{questionId:"qn1_b", qnlabel:"b)", qnstatement:"Gender", iskey:true},
             qn1_c:{questionId:"qn1_c", qnlabel:"c)", qnstatement:"Title", iskey:true},
-            qn1_d:{questionId:"qn1_d", qnlabel:"d)", qnstatement:"E-mail", iskey:true},
+            qn1_d:{questionId:"qn1_d", qnlabel:"d)", qnstatement:"Agency Name", iskey:true},
             qn2:{questionId:"qn2", qnlabel:"2", qnstatement:"Please specify your agency’s operating status, as below:", iskey:false},
             qn2_a_i:{questionId:"qn2_a_i", qnlabel:"a)", qnstatement:"Physical address:", iskey:true},
             qn2_a_ii:{questionId:"qn2_a_ii", qnlabel:"", qnstatement:"District:", iskey:true},
             qn2_b:{questionId:"qn2_b", qnlabel:"b", qnstatement:"Permit No:", iskey:true},
             qn3:{questionId:"qn3", qnlabel:"3", qnstatement:"How long has the agency operated in Uganda? (years)", iskey:false},
             qn4:{questionId:"qn4", qnlabel:"4", qnstatement:"How many Ugandans do you think are employed by the NGO sector country wide? Give the number:", iskey:false},
-            qn5:{questionId:"qn5", qnlabel:"5", qnstatement:"Do you think prior stakeholder consultations & pubic access to NGO reports might further enhance compliance with grants reporting requirements?", iskey:false},
+            qn8:{questionId:"qn8", qnlabel:"8", qnstatement:"Using audit model, what audit opinions are common amongst the NGOs in Uganda?", iskey:false},
+             qn8_a:{questionId:"qn8_a", qnlabel:"a)", qnstatement:"Unqualified (Specify number of NGOs)", iskey:true},
+             qn8_b:{questionId:"qn8_b", qnlabel:"b)", qnstatement:"Qualified (Specify number of NGOs) ", iskey:true},
+             qn8_c:{questionId:"qn8_c", qnlabel:"c)", qnstatement:"Disclaimer (Specify number of NGOs)", iskey:true},
             qn6:{questionId:"qn6", qnlabel:"6", qnstatement:"How would you as a regulator ensure prior stakeholder consultations & pubic access to NGO reports?", iskey:false},
             qn7:{questionId:"qn7", qnlabel:"7", qnstatement:"On a scale of 1-5, how are Non-Governmental Organisations in Uganda responsive to calls to submit their quarterly financial reports?", iskey:false},
-            qn8:{questionId:"qn8", qnlabel:"8", qnstatement:"Do you feel donor reporting requirements are fairly simple and therefore achievable by the NGOs?", iskey:false},
-            qn9:{questionId:"qn9", qnlabel:"9", qnstatement:"What do you suggest could facilitate NGOs to comply with government reporting requirements?", iskey:false}
+            qn8:{questionId:"qn8", qnlabel:"8", qnstatement:"Using audit model, what audit opinions are common amongst the NGOs in Uganda?", iskey:false},
+            qn9:{questionId:"qn9", qnlabel:"9", qnstatement:"Do you feel donor reporting requirements are fairly simple and therefore achievable by the NGOs?", iskey:false},
+            qn10:{questionId:"qn10", qnlabel:"10", qnstatement:"What do you suggest could motivate NGOs more to comply with government reporting requirements?", iskey:false}
         },
         organisations:[]
     }
