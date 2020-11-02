@@ -25,7 +25,7 @@
         user-select: none;
       }
       
-      #sidebar-toggle-btn{ position:fixed; width:8%; background:white; z-index:10; padding:0.5%; right:0; top:14%; float:right; box-shadow:0 0 15px 10px rgb(0,0,0,0.1);}
+      #sidebar-toggle-btn{ position:fixed; width:5%; background:white; z-index:10; padding:0.5%; right:0; top:14%; float:right; box-shadow:0 0 15px 10px rgb(0,0,0,0.1);}
       #right-sidebar{ position:fixed; background:linen; z-index:20; padding:1%; right:0; top:10%; float:right; box-shadow:0 0 20px 10px rgb(0,0,0,0.1);}
   
       #descr{ width:100%; border-radius:5px; min-height:150px; border:1px solid lightgray; text-align:left; }
@@ -77,13 +77,15 @@
 		  <td style="width:30%; "> <img src="images/mak-log-clear.png" width="30%"/> MAKERERE UNIVERSITY </td>
 		  <td style="padding:0 10% 0 5%">
 		    <div style="text-align:center; color:blue">
-		    <p style="font-size:0.7em; ">Study By</p>  
-	        <p style="font-size:0.9em">Student: <b>Kusemererwa Moses</b> <br>Reg. No: 2018/HD06/3491U </p> 
-	        <p style="font-size:0.7em"> Supervised by:<br/>
-                Dr. Gerald Kasigwa and
-                Dr. Festo Nyende Tusubira
-            </p>
-            </div>
+		        <p style="font-size:0.7em; ">
+		        Study By 
+	            <br/>Kusemererwa Moses 
+	            <br/>2018/HD06/3491U </p> 
+	            <p style="font-size:0.7em"> Supervised by:<br/>
+                    Dr. Gerald Kasigwa <br/>
+                    Dr. Festo Nyende Tusubira
+                </p>
+             </div>
 		  </td>
 		  <td style="width:30%; text-align:right"> <span id="dct-label">DATA COLLECTION TOOL</span> <img src="images/dctt.png" width="30%" /> </td>
 	  </tr>
@@ -112,7 +114,7 @@
 	   <p/>
          <!-- -------form guide------- -->
          <hr/>
-         <div style="color:gray" id="formGuideDiv">
+         <div style="color:gray; font-size:0.7em" id="formGuideDiv">
             <i><b>FORM GUIDE: </b>
             Our system will intelligently identify all responses from the same organisation and 
             merge them into one complete document. So it's okay to submit a partly filled form in case 
@@ -139,7 +141,7 @@
                     <option>Hon</option>
                     <option>H.E</option>
                     <option>CPA</option>
-                    <option>ACCA</option> 
+                    <option>FCCA</option> 
                 </select>
                 </div>
             </td> 
@@ -203,7 +205,7 @@
 			        <td>
 				        <div class="custom-control custom-radio">
 			            <input id="org-permit-radio3" name="permit" type="radio" class="custom-control-input" value="None" onblur="Answered('2')"/>
-			            <label class="custom-control-label" for="org-permit-radio3">None of the above</label>
+			            <label class="custom-control-label" for="org-permit-radio3">None </label>
 			           </div>
 			        </td>
 		        </tr>
@@ -254,9 +256,7 @@
 		        </tr>
           </table>
         </div> <!-- --- -->
-        <hr/>
-        <h4><b>Finance/Admin Dept questions</b></h4>
-        <hr/>
+         
         <!-- -------question 5------- -->
         <div class="mb-3"> 
           <table width="100%" class="question-table">
@@ -426,7 +426,7 @@
 		        <tr>
 			        <td> 
 				        <br/>
-				        If yes, how?
+				        (a). If yes, how?
 			        </td>
 			        <td>  
 				        <br/>
@@ -453,15 +453,13 @@
 		        <tr>
 			        <td colspan="4"> 
 				        <br/>
-				        If no, why?	Specify reasons <br/>
+				        (b). If no, why? Specify reasons <br/>
                         <input type="text" class="form-control" id="no-share-reason" placeholder="" value="" onblur="Answered('8')"/>
 			        </td>
 			    </tr>
           </table>
         </div> <!-- --- -->
-        <hr/>
-        <h4><b>Programmes/Logistics Dept questions</b></h4>
-        <hr/>
+         
         <!-- -------question 9------- -->
         <div class="mb-3"> 
           <table width="100%" class="question-table">
@@ -717,6 +715,12 @@
 			            <label class="custom-control-label" for="donor-req-necessary-radio3">Sometimes</label>
 			           </div>
 			        </td>
+			        <td>
+				        <div class="custom-control custom-radio">
+			            <input id="donor-req-necessary-radio3" name="donor-req-necessary" type="radio" class="custom-control-input" value="Not sure" onblur="Answered('13')"/>
+			            <label class="custom-control-label" for="donor-req-necessary-radio3">Not sure</label>
+			           </div>
+			        </td>
 		        </tr>
           </table>
         </div> <!-- --- -->
@@ -724,7 +728,7 @@
         <div class="mb-3"> 
           <table width="100%" class="question-table">
 		        <tr>
-			        <td colspan="3"> If yes, how do they help? </td>
+			        <td colspan="3">(a). If yes, how do they help? </td>
 		        </tr>
 		        <tr>
 			        <td> 
@@ -752,7 +756,7 @@
         <div class="mb-3"> 
           <table width="100%" class="question-table">
 		        <tr>
-			        <td colspan="3"> If no, why are they unnecessary? </td>
+			        <td colspan="3">(b). If no, why are they unnecessary? </td>
 		        </tr>
 		        <tr>
 			        <td> 
@@ -831,7 +835,7 @@
     <!--  --> 
     <!--right control bar -->
     <div id="sidebar-toggle-btn">
-        <img src="images/arrow-left.svg" width="15px"/> <small>Show controll panel</small>
+        <img src="images/save.svg" width="15px"/> <small>Save and continue later</small>
     </div>
     <div class="order-md-2 mb-4 oof" id="right-sidebar">
       <div style="border:1px solid linen; margin:0 0 10px 0; border-radius:2px; " >
