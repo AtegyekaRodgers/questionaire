@@ -48,7 +48,7 @@
       #letter-thumb{ width:50%; min-height:100px; box-shadow:0 0 10px 1px lightgray; }
       #designer-footer-info{ position:relative; bottom:0; width:100%; padding:10px 0 10px 0; border-top:1px solid lightgray; }
       #footer-left-div{ width:90%; text-align:left; float:left; }
-      #footer-right-div{ width:10%; text-align:left; float:left; border:2px solid lightgray; border-radius:4px; padding:4px 4px 4px 5px; background-color:rgb(245 245 245, 0.9); margin-bottom:10px; }    
+      #footer-right-div{ width:10%; text-align:left; float:right; border:2px solid lightgray; border-radius:4px; padding:4px 4px 4px 5px; background-color:rgb(245 245 245, 0.9); margin-bottom:10px; }    
       
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
@@ -950,21 +950,15 @@
 <div id="footer" style="text-align:center; position:relative; float:left; width:100%"> 
 	<small> 
     <p class="mb-1" id="designer-footer-info">  
-        <div style="width:90%; float:left; margin-left:5%" > 
-            <div id="footer-left-div"> 
-                &copy; <script>document.write(new Date().getFullYear());</script> Software Development projects by <br/> <br/> Eng. Rodgers Ategyeka
-                <span style="margin-left:5%"><img src="/static/my-icons/phone-alt.svg" width="20px"/> +256 781 224 508, </span> 
-                <span style="margin-left:5%"><img src="/static/my-icons/ic_mail_outline_black_24dp.png" width="20px"/> atrodgers77@gmail.com </span> 
-            </div> 
-            <div id="footer-right-div"> 
-              <div class="text-success" style="width:80%; float:left;">
-                <h6 class="my-0"><u>Hire me</u></h6>
-                <small>SOFTWARE ENGINEER AVAILABLE FOR HIRE.
-                <br/>For similar or more projects. 
-                <br/> Call: +256 781 224 508</small>
-                <br/> Email: atrodgers77@gmail.com</small>
-              </div>
-              <img src="/static/images/rodgers.png" width="20%" 
+        <div style="width:90%; float:left; margin-left:5%; margin-bottom:10px" > 
+            <div id="footer-left-div" style="color:green; font-weight:700;">
+                &copy; <script>document.write(new Date().getFullYear());</script> Software Development projects by Eng. Rodgers Ategyeka.
+                <span >For similar or more software engineering/development projects, <br/>Call: </span>
+                <span style="margin-left:2%"><img src="/static/my-icons/phone-alt.svg" width="20px"/> +256 781 224 508, </span>
+                <span style="margin-left:4%"><img src="/static/my-icons/ic_mail_outline_black_24dp.png" width="20px"/> atrodgers77@gmail.com </span> 
+            </div>
+            <div id="footer-right-div">
+              <img src="/static/images/rodgers.png" width="25%" 
               style="float:right; border:3px solid linen; border-radius:4px;"/> 
             </div> 
         </div>  
