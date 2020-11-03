@@ -36,7 +36,7 @@
       #delete-descr-section1{ border:1px solid linen; float:right; width:25px; text-align:center; }
       #delete-descr-section1:hover{ border:1px solid red; background:orange; color:white; font-weight:500; border-radius:4px; cursor:pointer; }    
       #formfeedback-box{ display:none; }
-      #preview-thumb{ width:17%; min-height:70px; box-shadow:0 0 10px 1px lightgray;}
+      #preview-thumb{ width:17%; min-height:70px; box-shadow:0 0 10px 1px lightgray; text-align:center; }
       #letter-thumb{ width:50%; min-height:100px; box-shadow:0 0 10px 1px lightgray;}
       .oon{ display:block}
       .oof{ display:none }
@@ -363,25 +363,25 @@
 		        <tr>
 			        <td> 
 				        <div class="custom-control custom-radio"> 
-					        <input id="documenting-radio1" name="documenting" type="radio" class="custom-control-input" value="Strongly agree" onblur="Answered('7')"/> 
+					        <input id="documenting-radio1" name="documenting" type="radio" class="custom-control-input" value="Yes" onblur="Answered('7')"/> 
 					        <label class="custom-control-label" for="documenting-radio1">Yes</label> 
 					     </div>
 			        </td>
 			        <td>  
 				        <div class="custom-control custom-radio"> 
-					        <input id="documenting-radio2" name="documenting" type="radio" class="custom-control-input" value="Partially agree" onblur="Answered('7')"/> 
+					        <input id="documenting-radio2" name="documenting" type="radio" class="custom-control-input" value="No" onblur="Answered('7')"/> 
 					        <label class="custom-control-label" for="documenting-radio2">No</label> 
 				        </div>
 			        </td> 
 			        <td>  
 				        <div class="custom-control custom-radio"> 
-					        <input id="documenting-radio2" name="documenting" type="radio" class="custom-control-input" value="Partially agree" onblur="Answered('7')"/> 
-					        <label class="custom-control-label" for="documenting-radio2">Sometimes</label> 
+					        <input id="documenting-radio3" name="documenting" type="radio" class="custom-control-input" value="Sometimes" onblur="Answered('7')"/> 
+					        <label class="custom-control-label" for="documenting-radio3">Sometimes</label> 
 				        </div>
 			        </td> 
 			        <td>
 				        <div class="custom-control custom-radio">
-			            <input id="documenting-radio5" name="documenting" type="radio" class="custom-control-input" value="Strongly disagree" onblur="Answered('7')"/>
+			            <input id="documenting-radio5" name="documenting" type="radio" class="custom-control-input" value="Not sure" onblur="Answered('7')"/>
 			            <label class="custom-control-label" for="documenting-radio5">Not sure</label>
 			           </div>
 			        </td>
@@ -862,7 +862,7 @@
             <small class="text-muted">View how the document to be sent will <br/>look like</small>
           </div>
           <div id="preview-thumb" onclick="openNav('regulator')">
-	          <!-- preview details to be popu;ated here -->
+	          <img src="images/preview-doc.png" width="94%"/>
           </div>
         </li>
         <li class="list-group-item d-flex justify-content-between lh-condensed">
